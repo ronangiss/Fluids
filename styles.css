@@ -1,0 +1,325 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+		background: linear-gradient(-45deg, rgba(0, 130, 230, 0.5), rgba(0, 130, 230, 0) 70%),
+					linear-gradient(45deg, rgba(165, 110, 190, 0.5), rgba(165, 110, 190, 0) 70%);
+					
+	}
+body {
+	width: 75%; /* page content fills 70% of page width*/
+	margin: 0 auto; /* top/bottom left/right */
+	font: 100% Tahoma, Geneva, sans-serif; /*100% is basically same as 1em*/
+}
+header {
+	font-family: Palatino, serif; /*following fonts are fallbacks*/
+	font-size: 1em; /*2 times default size of text on browser*/
+	font-weight: normal; /*unbolds automatically bolded headings*/
+	margin: 1em 0 .4em; /*top left/right bottom*/
+	padding: 1em 0;
+}
+section {
+	margin: 2em 0;
+}
+hr {
+	margin: 1em 0;
+	height: 3px;
+	border-style: none;
+	background-color: maroon;
+}
+ul {
+	margin-left: 5%;
+	text-align: left;
+}
+nav ul {
+	list-style-type: none; /*removes bullet points*/
+	width: 100%;
+	text-align:left;
+}
+nav li {	/* Used to crop images*/
+	display: inline-block;
+	position: relative;
+	left: 0%;
+	width: 31%;
+	height: 25%;
+	margin: 3% 0.5%;
+}
+nav li img:hover {
+	opacity: 0.7;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+h1 {
+	font-size: 3em;
+	font-weight: bold;
+	font-family: Palatino, serif;
+	margin: 0;
+}
+h2 {
+	font-size: 1.8em;
+	font-weight: bold;
+	font-family: Palatino, serif;
+	margin: 0;
+}
+h3 {
+	font-size: 1.3em;
+	font-weight: bold;
+	color: navy;
+}
+h4 {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: mediumblue;
+}
+article {
+	font-size: 1.1em;
+	line-height: 1.4; /*spacing between lines*/
+	text-align: justify;
+	margin: 0.5em 0; /*zero on alls margin but then setting bottom to 1*/
+}
+footer {
+	text-align: center;
+	width: 50%;
+	margin-bottom: 3em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1em 0;
+	color: midnightblue;
+}
+a {
+	color: darkblue;
+	text-decoration: underline;
+}
+
+a:hover {
+	cursor: pointer;
+	color: darkslateblue;
+}
+.imageContainer {
+	max-height: 250px;
+	overflow: hidden;
+}
+.imageLabel {
+	font-size: 1.4em;
+	font-weight: bold;
+	text-align: center;
+	background: wheat;
+	border-radius: 10px;
+	padding:2.5px;
+}
+.pageLink {
+	color: orangered;
+	text-decoration: none;
+}
+
+.pageLink:hover {
+	cursor: pointer;
+	color: steelblue;
+}
+.footerLink {
+	color: midnightblue;
+	text-decoration: underline;
+}
+
+.footerLink:hover {
+	cursor: pointer;
+	color: blueviolet;
+}
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	width: 60%;
+}
+.label {
+	text-align: center;
+	margin: 0.1em 0 0.5em;
+	font-weight: bold;
+}
+.faded {
+	-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0));
+}
+@media only screen 
+and (min-width: 320px){
+	.doubleList {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+}
+}
+@media only screen 
+and (min-width: 801px){
+	.doubleList {
+	display: inline-block;
+	vertical-align: top;
+	width: 45%;
+	margin-right: 4%;
+}
+}
+.doubleRowImage {
+	display: inline-block;
+	position: relative;
+	margin-top: 2%;
+	margin-right: 2%;
+	margin-left: 2%;
+	left: 16%;
+	vertical-align: middle;
+	width: 30%;
+}
+.doubleRowImageWide {
+	display: inline-block;
+	position: relative;
+	margin-top: 2%;
+	margin-right: 2%;
+	margin-left: 2%;
+	left: 5%;
+	vertical-align: middle;
+	width: 42%;
+}
+.doubleColImage {
+	display: block;
+}
+.doubleColLabel {
+	display: block;
+	margin-bottom: 35%;
+}
+.home {
+	color: orangered;
+	font-size: 1.5em;
+	text-decoration: underline;
+}
+.home:hover {
+	color: midnightblue;
+	font-size: 1.5em;
+	text-decoration: underline;
+}
+.centerText {
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+.pdfobject-container {
+	height: 70rem; 
+	border: 0.5rem solid rgba(0,0,0,.2); 
+}
+.accordion {
+	background-color: lightgray;
+  color: black;
+  cursor: pointer;
+  padding: 1.5%;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.active, .accordion:hover {
+	background-color: lightseagreen;
+}
+/*Insert + or - icon after button but before button label, seems like I can also write before...*/
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 1em;
+  color: black;
+  float: left;
+  margin-right: 1em;
+}
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.panel {
+	padding: 0;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.pageNav ul {
+	margin: 0;
+	text-align: center;
+}
+.pageNav ul li {
+	margin-top: 0.5em;
+	margin-bottom: 0em;
+	padding: 0.5%;
+	width: 12%;
+	text-align: center;
+	background-color: indigo;
+}
+.pageNav ul li:hover {
+	background-color: darkviolet;
+}
+.pageNav ul li a {
+	font-size: 1.3em;
+	color: white;
+	text-decoration: none;
+}
+.python {
+	font-style: italic;
+	color: dimgray;
+	background-color: white;
+}
+.equation {
+	display: inline-block;
+	text-align: center;
+	font-size: 1.5em;
+	font-family: MJXZERO, MJXTEX;
+}
+#mainTitle {
+	text-align: center;
+	color: maroon;
+	background: slategray;
+	padding: 2% 15%;
+}
+#intro {
+	width: 80%;
+}
+#intro h2{
+	margin: 0.5em 0;
+}
+#accumulation {
+	position: relative;
+	border-radius: 10px;
+  padding: 5px 5px;
+}
+#hidden-accumulation {
+	visibility: hidden;
+  width: 15em;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px 5px;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  left: 18%;
+  top: 46%;
+}
+#flux {
+	position: relative;
+	border-radius: 10px;
+  padding: 5px 5px;
+}
+#hidden-flux {
+	visibility: hidden;
+  width: 15em;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px 5px;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  right: 18%;
+  top: 48%;
+}

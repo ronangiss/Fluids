@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Homepage for Rónán Gissler's Projects in Mechanical Engineering">
+<meta name="google-site-verification" content="a5yGE61wbLl2nfdXtS-jhn2NdsYSYXnah-SQnvN8668" />
+<title>Home</title>
+<link href="https://fonts.cdnfonts.com/css/latin-modern-roman" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<!--mathjax stuff -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<header role='banner' id = "mainTitle">
+<!-- Add background image for title -->
+	<h1>Rónán's Online Fluids Notes</h1>
+	<nav role='navigation' class='pageNav'>
+				<ul>
+					<li>
+						<a href="index.html" title="Home Page">
+						Home
+						</a>
+					</li>
+				</ul>
+			</nav>
+</header>
+<main role='main'>
+	<article role='article'>
+		<section id="intro">
+			<h2>Introduction</h2>
+			<p>&emsp;&emsp;Place to store fluids notes, hopefully this is useful to others as well.</p>
+		</section>
+		<section>
+			<h2>Conservation Laws</h2>
+			<div id="hidden-accumulation">
+				Accumulation term. The rate at which mass is appearing or disappearing from the control volume.
+			</div>
+			<math display="block">
+				<mrow id="accumulation">
+					<msub>
+				    	<mo movablelimits="false">∭</mo>
+				    	<mi>V</mi>
+				    </msub>
+				    <mfrac>
+				    	<mrow>
+				        	<mi>∂</mi>
+				        	<mi>ρ</mi>
+				      	</mrow>
+				    	<mrow>
+				        	<mi>∂</mi>
+				        	<mi>t</mi>
+				      	</mrow>
+				    </mfrac>
+				    <mspace width="0.2778em"></mspace>
+				    <mi>d</mi>
+				    <mi>V</mi>
+				</mrow>
+				<mo>=</mo>
+			  	<mrow id="flux">
+			    	<mo>−</mo>
+			    	<msub>
+			      		<mo movablelimits="false">∬</mo>
+			      		<mi>S</mi>
+			    	</msub>
+			    	<mi>ρ</mi>
+			    	<mover>
+			      		<mi>v</mi>
+			      		<mo stretchy="false">→</mo>
+			    	</mover>
+			    		<mo>⋅</mo>
+			    	<mover>
+			      		<mi>n</mi>
+			      		<mo stretchy="false">^</mo>
+			    	</mover>
+			  	</mrow>
+			</math>
+			<div id="hidden-flux">
+				Flux term. Mass flow out subtracted from mass flow in.
+			</div>
+			$$\frac{d \rho}{dt} + \rho\nabla \cdot v = 0$$
+		</section>
+	</article>
+</main>
+<script>
+const hiddenDiv = document.getElementById('hidden-accumulation');
+
+// Show hidden DIV on hover
+document.addEventListener('mouseover', function handleMouseOver(e) {
+	if (e.target.closest("#accumulation")){
+		document.getElementById('hidden-accumulation').style.visibility = 'visible';
+	 	e.target.closest("#accumulation").style.backgroundColor = "lightgray";
+	}
+	if (e.target.closest("#flux")){
+	 	document.getElementById('hidden-flux').style.visibility = 'visible';
+	 	e.target.closest("#flux").style.backgroundColor = "lightgray";
+	}
+});
+
+// Hide DIV on mouse out
+document.addEventListener('mouseout', function handleMouseOut(e) {
+	if (e.target.closest("#accumulation")){
+		document.getElementById('hidden-accumulation').style.visibility = 'hidden';
+		e.target.closest("#accumulation").style.backgroundColor = "transparent";
+	}
+	if (e.target.closest("#flux")){
+		document.getElementById('hidden-flux').style.visibility = 'hidden';
+		e.target.closest("#flux").style.backgroundColor = "transparent";
+	}
+});
+</script>
+<body>
+</html>
