@@ -265,12 +265,6 @@ and (min-width: 801px){
 	color: dimgray;
 	background-color: white;
 }
-.equation {
-	display: inline-block;
-	text-align: center;
-	font-size: 1.5em;
-	font-family: MJXZERO, MJXTEX;
-}
 #mainTitle {
 	text-align: center;
 	color: maroon;
@@ -284,7 +278,6 @@ and (min-width: 801px){
 	margin: 0.5em 0;
 }
 #accumulation {
-	position: relative;
 	border-radius: 10px;
   padding: 5px 5px;
 }
@@ -298,13 +291,10 @@ and (min-width: 801px){
   padding: 5px 5px;
   transition: opacity 1s ease-in-out;
 
-  position: absolute;
-  z-index: 1;
-  left: 18%;
-  top: 46%;
+  float: left;
+	margin-right: 2%;
 }
 #flux {
-	position: relative;
 	border-radius: 10px;
   padding: 5px 5px;
 }
@@ -318,8 +308,11 @@ and (min-width: 801px){
   padding: 5px 5px;
   transition: opacity 1s ease-in-out;
 
-  position: absolute;
-  z-index: 1;
-  right: 18%;
-  top: 48%;
+  float: right;
+  margin-left: 2%;
+}
+#equation {
+	display: flex;
+  align-items: center;
+  justify-content: center;
 }
