@@ -76,13 +76,450 @@
 			      		<mi>n</mi>
 			      		<mo stretchy="false">^</mo>
 			    	</mover>
+			    	<mspace width="0.2778em"></mspace>
+			    	<mi>d</mi>
+				    <mi>S</mi>
 			  	</mrow>
 			</math>
 			<div id="hidden-flux">
 				Flux term. Mass flow out subtracted from mass flow in.
 			</div>
 		</div>
-			$$\frac{d \rho}{dt} + \rho\nabla \cdot v = 0$$
+			<math display="block">
+			  <mrow>
+			    <mfrac>
+			      <mrow>
+			        <mi>d</mi>
+			        <mi>ρ</mi>
+			      </mrow>
+			      <mrow>
+			        <mi>d</mi>
+			        <mi>t</mi>
+			      </mrow>
+			    </mfrac>
+			    <mo>+</mo>
+			    <mi>ρ</mi>
+			    <mo>∇</mo>
+			    <mo>⋅</mo>
+			    <mover>
+		      		<mi>v</mi>
+		      		<mo stretchy="false">→</mo>
+		    	</mover>
+			    <mo>=</mo>
+			    <mn>0</mn>
+			  </mrow>
+			</math>
+			Looking at this expression we can see that when the fluid is incompressible, the lagrangian/material derivative of density will be zero so in an incompressible fluid the divergence of the velocity field must be zero.
+		</section>
+		<section>
+		<h2>Momentum Conservation</h2>
+		$$\rho\frac{dv}{dt} + \rho(v \cdot \nabla)v = \rho f - \nabla P + \nabla \cdot [\sigma ']$$
+			<math display="block">
+				<mrow>
+					<mfrac>
+				    	<mrow>
+				        	<mi>d</mi>
+				      	</mrow>
+				    	<mrow>
+				        	<mi>d</mi>
+				        	<mi>t</mi>
+				      	</mrow>
+				    </mfrac>
+					<msub>
+				    	<mo movablelimits="false">∭</mo>
+				    	<mi>V</mi>
+				    </msub>
+				    <mi>ρ</mi>
+				    <mover>
+			      		<mi>v</mi>
+			      		<mo stretchy="false">→</mo>
+			    	</mover>
+			    	<mspace width="0.2778em"></mspace>
+				    <mi>d</mi>
+				    <mi>V</mi>
+				</mrow>
+				<mo>=</mo>
+			  	<mrow>
+			    	<mo>−</mo>
+			    	<msub>
+			      		<mo movablelimits="false">∬</mo>
+			      		<mi>S</mi>
+			    	</msub>
+			    	<mo>(</mo>
+			    	<mi>ρ</mi>
+			    	<mover>
+			      		<mi>v</mi>
+			      		<mo stretchy="false">→</mo>
+			    	</mover>
+			    	<mo>(</mo>
+			    	<mover>
+			      		<mi>v</mi>
+			      		<mo stretchy="false">→</mo>
+			    	</mover>
+			    	<mo>⋅</mo>
+			    	<mover>
+			      		<mi>n</mi>
+			      		<mo stretchy="false">^</mo>
+			    	</mover>
+			    	<mo>)</mo>
+			    	<mo>+</mo>
+			    	<mi>P</mi>
+			    	<mover>
+			      		<mi>n</mi>
+			      		<mo stretchy="false">^</mo>
+			    	</mover>
+			    	<mo>-</mo>
+			    	<mo>[</mo>
+			    	<msup>
+				    	<mi>σ</mi>
+				    	<mo>'</mo>
+				    </msup>
+			    	<mo>]</mo>
+			    	<mo>⋅</mo>
+			    	<mover>
+			      		<mi>n</mi>
+			      		<mo stretchy="false">^</mo>
+			    	</mover>
+			    	<mo>)</mo>
+			    	<mspace width="0.2778em"></mspace>
+			    	<mi>d</mi>
+				    <mi>S</mi>
+			  	</mrow>
+			</math>
+		</section>
+		<section>
+		<h2>Energy Conservation</h2>
+			<math display="block">
+				<mrow>
+					<mfrac>
+			        	<mi>∂</mi>
+				    	<mrow>
+				        	<mi>∂</mi>
+				        	<mi>t</mi>
+				      	</mrow>
+				    </mfrac>
+				    <mo>(</mo>
+				    <mfrac>
+						<mrow>
+				        	<mi>ρ</mi>
+				        	<msup>
+						    	<mi>v</mi>
+						    	<mn>2</mn>
+						    </msup>
+				      	</mrow>
+				      	<mn>2</mn>
+				    </mfrac>
+				    <mo>)</mo>
+				</mrow>
+				</mrow>
+				<mo>=</mo>
+			  	<mrow>
+			  		<mo>-</mo>
+			  		<mo>∇</mo>
+			    	<mo>⋅</mo>
+			    	<mo>[</mo>
+			    	<mover>
+			      		<mi>v</mi>
+			      		<mo stretchy="false">→</mo>
+			    	</mover>
+			    	<mo>(</mo>
+			    	<mfrac>
+						<mrow>
+				        	<mi>ρ</mi>
+				        	<msup>
+						    	<mi>v</mi>
+						    	<mn>2</mn>
+						    </msup>
+				      	</mrow>
+				      	<mn>2</mn>
+				    </mfrac>
+				    <mo>+</mo>
+				    <mi>P</mi>
+			    	<mo>)</mo>
+			    	<mo>-</mo>
+			    	<mo>(</mo>
+			    	<mo>[</mo>
+			    	<msup>
+				    	<mi>σ</mi>
+				    	<mo>'</mo>
+				    </msup>
+			    	<mo>]</mo>
+			    	<mo>⋅</mo>
+			    	<mover>
+			      		<mi>v</mi>
+			      		<mo stretchy="false">→</mo>
+			    	</mover>
+			    	<mo>)</mo>
+			    	<mo>]</mo>
+			    	<mo>+</mo>
+			    	<mi>ρ</mi>
+			    	<mover>
+			      		<mi>v</mi>
+			      		<mo stretchy="false">→</mo>
+			    	</mover>
+			    	<mo>⋅</mo>
+			    	<mover>
+			      		<mi>f</mi>
+			      		<mo stretchy="false">→</mo>
+			    	</mover>
+			    	<mo>-</mo>
+			    	<msub>
+				    	<msup>
+					    	<mi>σ</mi>
+					    	<mo>'</mo>
+					    </msup>
+					    <mrow>
+					    	<mi>i</mi>
+					    	<mi>j</mi>
+					    </mrow>
+					</msub>
+					<mfrac>
+			        	<mrow>
+				        	<mi>∂</mi>
+				        	<msub>
+				        		<mi>v</mi>
+				        		<mi>i</mi>
+				        	</msub>
+				      	</mrow>
+				    	<mrow>
+				        	<mi>∂</mi>
+				        	<msub>
+				        		<mi>x</mi>
+				        		<mi>j</mi>
+				        	</msub>
+				      	</mrow>
+				    </mfrac>
+			  	</mrow>
+			</math>
+
+
+			<math display="block">
+				<mrow>
+					<mfrac>
+				    	<mrow>
+				        	<mi>d</mi>
+				      	</mrow>
+				    	<mrow>
+				        	<mi>d</mi>
+				        	<mi>t</mi>
+				      	</mrow>
+				    </mfrac>
+					<msub>
+				    	<mo movablelimits="false">∭</mo>
+				    	<mi>V</mi>
+				    </msub>
+				    <mfrac>
+						<mrow>
+				        	<mi>ρ</mi>
+				        	<msup>
+						    	<mi>v</mi>
+						    	<mn>2</mn>
+						    </msup>
+				      	</mrow>
+				      	<mn>2</mn>
+				    </mfrac>
+			    	<mspace width="0.2778em"></mspace>
+				    <mi>d</mi>
+				    <mi>V</mi>
+				</mrow>
+				<mo>=</mo>
+			    <mo>−</mo>
+			    <mrow>
+			    	<msub>
+			      		<mo movablelimits="false">∬</mo>
+			      		<mi>S</mi>
+			    	</msub>
+			    	<mfrac>
+						<mrow>
+				        	<mi>ρ</mi>
+				        	<msup>
+						    	<mi>v</mi>
+						    	<mn>2</mn>
+						    </msup>
+				      	</mrow>
+				      	<mn>2</mn>
+				    </mfrac>
+			    	<mo>(</mo>
+			    	<mover>
+			      		<mi>v</mi>
+			      		<mo stretchy="false">→</mo>
+			    	</mover>
+			    	<mo>⋅</mo>
+			    	<mover>
+			      		<mi>n</mi>
+			      		<mo stretchy="false">^</mo>
+			    	</mover>
+			    	<mo>)</mo>
+			    	<mspace width="0.2778em"></mspace>
+			    	<mi>d</mi>
+				    <mi>S</mi>
+				</mrow>
+				<mo>−</mo>
+				<mrow>
+				    <msub>
+			      		<mo movablelimits="false">∬</mo>
+			      		<mi>S</mi>
+			    	</msub>
+			    	<mi>P</mi>
+			    	<mo>(</mo>
+			    	<mover>
+			      		<mi>v</mi>
+			      		<mo stretchy="false">→</mo>
+			    	</mover>
+			    	<mo>⋅</mo>
+			    	<mover>
+			      		<mi>n</mi>
+			      		<mo stretchy="false">^</mo>
+			    	</mover>
+			    	<mo>)</mo>
+			    	<mspace width="0.2778em"></mspace>
+			    	<mi>d</mi>
+				    <mi>S</mi>
+			  	</mrow>
+			  	<mo>+</mo>
+			  	<mrow>
+				    <msub>
+			      		<mo movablelimits="false">∬</mo>
+			      		<mi>S</mi>
+			    	</msub>
+			    	<mo>(</mo>
+			    	<mo>[</mo>
+			    	<msup>
+				    	<mi>σ</mi>
+				    	<mo>'</mo>
+				    </msup>
+			    	<mo>]</mo>
+			    	<mo>⋅</mo>
+			    	<mover>
+			      		<mi>n</mi>
+			      		<mo stretchy="false">^</mo>
+			    	</mover>
+			    	<mo>)</mo>
+			    	<mo>⋅</mo>
+			    	<mover>
+			      		<mi>v</mi>
+			      		<mo stretchy="false">→</mo>
+			    	</mover>
+			    	<mspace width="0.2778em"></mspace>
+			    	<mi>d</mi>
+				    <mi>S</mi>
+			  	</mrow>
+			  	<mo>+</mo>
+			  	<mrow>
+					<msub>
+				    	<mo movablelimits="false">∭</mo>
+				    	<mi>V</mi>
+				    </msub>
+				    <mi>ρ</mi>
+				    <mover>
+			      		<mi>f</mi>
+			      		<mo stretchy="false">→</mo>
+			    	</mover>
+				    <mo>⋅</mo>
+			    	<mover>
+			      		<mi>v</mi>
+			      		<mo stretchy="false">→</mo>
+			    	</mover>
+			    	<mspace width="0.2778em"></mspace>
+				    <mi>d</mi>
+				    <mi>V</mi>
+				</mrow>
+				<mo>-</mo>
+				<mrow>
+					<msub>
+				    	<mo movablelimits="false">∭</mo>
+				    	<mi>V</mi>
+				    </msub>
+				    <msub>
+				    	<msup>
+					    	<mi>σ</mi>
+					    	<mo>'</mo>
+					    </msup>
+					    <mrow>
+					    	<mi>i</mi>
+					    	<mi>j</mi>
+					    </mrow>
+					</msub>
+					<mfrac>
+			        	<mrow>
+				        	<mi>∂</mi>
+				        	<msub>
+				        		<mi>v</mi>
+				        		<mi>i</mi>
+				        	</msub>
+				      	</mrow>
+				    	<mrow>
+				        	<mi>∂</mi>
+				        	<msub>
+				        		<mi>x</mi>
+				        		<mi>j</mi>
+				        	</msub>
+				      	</mrow>
+				    </mfrac>
+			    	<mspace width="0.2778em"></mspace>
+				    <mi>d</mi>
+				    <mi>V</mi>
+				</mrow>
+			</math>
+		</section>
+		<section>
+		<h2>Bernoulli's Equation</h2>
+		<h3>Steady Flow</h3>
+			<math display="block">
+				<mrow>
+					<mo>(</mo>
+					<mover>
+			      		<mi>v</mi>
+			      		<mo stretchy="false">→</mo>
+			    	</mover>
+			    	<mo>⋅</mo>
+					<mo>∇</mo>
+					<mo>)</mo>
+					<mo>(</mo>
+					<mfrac>
+						<mrow>
+				        	<mi>ρ</mi>
+				        	<msup>
+						    	<mi>v</mi>
+						    	<mn>2</mn>
+						    </msup>
+				      	</mrow>
+				      	<mn>2</mn>
+				    </mfrac>
+				    <mo>+</mo>
+				    <mi>P</mi>
+				    <mo>+</mo>
+				    <mi>ρ</mi>
+				    <mi>φ</mi>
+					<mo>)</mo>
+					<mo>=</mo>
+					<mn>0</mn>
+				</mrow>
+				<mspace width="3em"></mspace>
+				<mrow>
+				    <mi>w</mi>
+				    <mi>h</mi>
+				    <mi>e</mi>
+				    <mi>r</mi>
+				    <mi>e</mi>
+				</mrow>
+				<mspace width="0.4em"></mspace>
+				<mrow>
+					<mover>
+			      		<mi>f</mi>
+			      		<mo stretchy="false">→</mo>
+				    </mover>
+				    <mo>=</mo>
+				    <mo>∇</mo>
+				    <mi>φ</mi>
+				</mrow>
+			</math>
+		<h3>Potential Flow</h3>
+			<math display="block">
+				<mrow>
+
+				</mrow>
+			</math>
 		</section>
 	</article>
 </main>
