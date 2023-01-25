@@ -85,30 +85,42 @@
 				Flux term. Mass flow out subtracted from mass flow in.
 			</div>
 		</div>
+		<div id="equation">
+			<div id="hidden-accumulation">
+				Accumulation term. The rate at which mass is appearing or disappearing from the control volume.
+			</div>
 			<math display="block">
-			  <mrow>
-			    <mfrac>
-			      <mrow>
-			        <mi>d</mi>
-			        <mi>ρ</mi>
-			      </mrow>
-			      <mrow>
-			        <mi>d</mi>
-			        <mi>t</mi>
-			      </mrow>
-			    </mfrac>
-			    <mo>+</mo>
-			    <mi>ρ</mi>
-			    <mo>∇</mo>
-			    <mo>⋅</mo>
-			    <mover>
-		      		<mi>v</mi>
-		      		<mo stretchy="false">→</mo>
-		    	</mover>
-			    <mo>=</mo>
-			    <mn>0</mn>
-			  </mrow>
+			 	<mrow id="accumulation">
+				    <mfrac>
+				      <mrow>
+				        <mi>d</mi>
+				        <mi>ρ</mi>
+				      </mrow>
+				      <mrow>
+				        <mi>d</mi>
+				        <mi>t</mi>
+				      </mrow>
+				    </mfrac>
+				</mrow>
+				<mo>+</mo>
+				<mrow id="flux">
+				    <mi>ρ</mi>
+				    <mo>(</mo>
+				    <mo>∇</mo>
+				    <mo>⋅</mo>
+				    <mover>
+			      		<mi>v</mi>
+			      		<mo stretchy="false">→</mo>
+			    	</mover>
+			    	<mo>)</mo>
+				    <mo>=</mo>
+				    <mn>0</mn>
+			  	</mrow>
 			</math>
+			<div id="hidden-flux">
+				What is this term. I'm not sure.
+			</div>
+		</div>
 			Looking at this expression we can see that when the fluid is incompressible, the lagrangian/material derivative of density will be zero so in an incompressible fluid the divergence of the velocity field must be zero.
 		</section>
 		<section>
@@ -404,6 +416,8 @@
 			    	<mi>d</mi>
 				    <mi>S</mi>
 			  	</mrow>
+			  	</math>
+			  	<math display="block">
 			  	<mo>+</mo>
 			  	<mrow>
 					<msub>
@@ -517,15 +531,62 @@
 		<h3>Potential Flow</h3>
 			<math display="block">
 				<mrow>
-
+					<mo>∇</mo>
+					<mo>(</mo>
+					<mi>ρ</mi>
+					<mfrac>
+			        	<mrow>
+				        	<mi>∂</mi>
+				        	<mi>Φ</mi>
+				      	</mrow>
+				    	<mrow>
+				        	<mi>∂</mi>
+				        	<mi>t</mi>
+				      	</mrow>
+				    </mfrac>
+				    <mo>+</mo>
+				    <mfrac>
+						<mrow>
+				        	<mi>ρ</mi>
+				        	<msup>
+						    	<mi>v</mi>
+						    	<mn>2</mn>
+						    </msup>
+				      	</mrow>
+				      	<mn>2</mn>
+				    </mfrac>
+				    <mo>+</mo>
+				    <mi>P</mi>
+				    <mo>+</mo>
+				    <mi>ρ</mi>
+				    <mi>φ</mi>
+					<mo>)</mo>
+					<mo>=</mo>
+					<mn>0</mn>
+				</mrow>
+				<mspace width="3em"></mspace>
+				<mrow>
+				    <mi>w</mi>
+				    <mi>h</mi>
+				    <mi>e</mi>
+				    <mi>r</mi>
+				    <mi>e</mi>
+				</mrow>
+				<mspace width="0.4em"></mspace>
+				<mrow>
+					<mover>
+			      		<mi>v</mi>
+			      		<mo stretchy="false">→</mo>
+				    </mover>
+				    <mo>=</mo>
+				    <mo>∇</mo>
+				    <mi>Φ</mi>
 				</mrow>
 			</math>
 		</section>
 	</article>
 </main>
 <script>
-const hiddenDiv = document.getElementById('hidden-accumulation');
-
 // Show hidden DIV on hover
 document.addEventListener('mouseover', function handleMouseOver(e) {
 	if (e.target.closest("#accumulation")){
