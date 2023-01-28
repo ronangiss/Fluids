@@ -277,11 +277,11 @@ and (min-width: 801px){
 #intro h2{
 	margin: 0.5em 0;
 }
-#accumulation {
+.equation_left {
 	border-radius: 10px;
   padding: 5px 5px;
 }
-#hidden-accumulation {
+.equation_left_hidden {
 	visibility: hidden;
   width: 15em;
   background-color: black;
@@ -294,11 +294,11 @@ and (min-width: 801px){
   float: left;
 	margin-right: 2%;
 }
-#flux {
+.equation_right {
 	border-radius: 10px;
   padding: 5px 5px;
 }
-#hidden-flux {
+.equation_right_hidden {
 	visibility: hidden;
   width: 15em;
   background-color: black;
