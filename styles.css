@@ -316,3 +316,74 @@ and (min-width: 801px){
   align-items: center;
   justify-content: center;
 }
+.tank
+{
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 200px;
+    border: 6px solid #262626;
+    border-top: 2px solid transparent;
+    z-index: 1;
+}
+.left_inlet
+{
+    display: inline-block;
+    position: relative;
+    transform: translate(7.75%,12%);
+    width: 150px;
+    height: 40px;
+    background-color: rgba(0,173,255,1);
+    border: 6px solid #262626;
+    border-left-style: none;
+    border-right-style: none;
+    z-index: 5;
+}
+.right_inlet
+{
+    display: inline-block;
+    position: relative;
+    transform: translate(-7.75%,12%);
+    width: 150px;
+    height: 40px;
+    background-color: rgba(0,173,255,1);
+    border: 6px solid #262626;
+    border-left-style: none;
+    border-right-style: none;
+    z-index: 5;
+}
+.water
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.water .wave
+{
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(water.png);
+    animation: animate 1s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 200px;
+    }
+}
+#mass_conservation_animation
+{
+    text-align: center;
+}
