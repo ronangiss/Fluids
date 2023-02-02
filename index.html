@@ -8,6 +8,7 @@
 <title>Home</title>
 <link href="https://fonts.cdnfonts.com/css/latin-modern-roman" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script src="jquery-3.6.3.min.js"></script>
 <!--mathjax stuff -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -36,6 +37,7 @@
 		<section>
 		<h2>Mass Conservation</h2>
         <div id="mass_conservation_animation">
+        <input type="range" name="slider-fill" id="m_in" value="0" min="1" max="5">
         <div class="left_inlet"></div>
         <div class="tank">
             <div class="water">
@@ -45,6 +47,7 @@
             </div>
         </div>
         <div class="right_inlet"></div>
+        <input type="range" name="slider-fill" id="m_out" value="0" min="1" max="5">
         </div>
 		<div id="equation">
 			<div class="equation_left_hidden">
@@ -233,7 +236,6 @@
 				      	<mn>2</mn>
 				    </mfrac>
 				    <mo>)</mo>
-				</mrow>
 				</mrow>
 				<mo>=</mo>
 			  	<mrow>
@@ -597,7 +599,7 @@
 		</section>
 	</article>
 </main>
-<script>
+<script type="text/javascript">
 // Show hidden DIV on hover
 document.addEventListener('mouseover', function handleMouseOver(e) {
 	if (e.target.closest(".equation_left")){
@@ -625,6 +627,46 @@ document.addEventListener('mouseout', function handleMouseOut(e) {
 		e.target.closest(".equation_right").style.backgroundColor = "transparent";
 	}
 });
+</script>
+<script type="text/javascript">
+    // var m_in = document.getElementById('m_in');
+    // dh = $(document).height()
+    // m_in.addEventListener('change', function () {
+
+    // })
+
+    $('#m_in').on('change', function () {
+        var m_in = parseInt($(this).val());
+        var m_out = parseInt($('#m_out').val())
+        var m_net = m_in - m_out;
+
+        if (m_net > 0) {
+            $('.wave'). css('animation', '1s animate linear infinite, 4s overflow linear forwards');
+            setTimeout(function () {
+                $('.wave'). css('animation', '1s animate linear infinite');
+            }, 5000);
+        }
+        else if (m_net < 0) {
+            $('.wave'). css('animation', '1s animate linear infinite, 4s drain linear forwards');
+            setTimeout(function () {
+                $('.wave'). css('animation', '1s animate linear infinite');
+            }, 5000);
+        }
+    });
+    $('#m_out').on('change', function () {
+        var m_out = parseInt($(this).val());
+        var m_in = parseInt($('#m_in').val())
+        var m_net = m_in - m_out;
+
+        if (m_net > 0) {
+        }
+        else if (m_net < 0) {
+            $('.wave'). css('animation', '1s animate linear infinite, 4s drain linear forwards');
+            setTimeout(function () {
+                $('.wave'). css('animation', '1s animate linear infinite');
+            }, 5000);
+        }
+    });
 </script>
 <body>
 </html>
