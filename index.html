@@ -37,7 +37,8 @@
 		<section>
 		<h2>Mass Conservation</h2>
         <div id="mass_conservation_animation">
-        <input type="range" name="slider-fill" id="m_in" value="0" min="1" max="5">
+		<div class="left_slider_label">Mass Flowrate In</div>
+        <input type="range" name="slider-fill" id="m_in" value="1" min="1" max="5">
         <div class="left_inlet"></div>
         <div class="tank">
             <div class="water">
@@ -47,7 +48,8 @@
             </div>
         </div>
         <div class="right_inlet"></div>
-        <input type="range" name="slider-fill" id="m_out" value="0" min="1" max="5">
+        <input type="range" name="slider-fill" id="m_out" value="1" min="1" max="5">
+		<div class="right_slider_label">Mass Flowrate Out</div>
         </div>
 		<div id="equation">
 			<div class="equation_left_hidden">
@@ -639,18 +641,19 @@ document.addEventListener('mouseout', function handleMouseOut(e) {
         var m_in = parseInt($(this).val());
         var m_out = parseInt($('#m_out').val())
         var m_net = m_in - m_out;
+		var time;
 
         if (m_net > 0) {
-            $('.wave'). css('animation', '1s animate linear infinite, 4s overflow linear forwards');
+            $('.wave'). css('animation', '1s animate linear infinite, ' + 4/Math.abs(m_net) + 's overflow linear forwards');
             setTimeout(function () {
                 $('.wave'). css('animation', '1s animate linear infinite');
-            }, 5000);
+            }, (4/Math.abs(m_net) + 1)*1000);
         }
         else if (m_net < 0) {
-            $('.wave'). css('animation', '1s animate linear infinite, 4s drain linear forwards');
+            $('.wave'). css('animation', '1s animate linear infinite, ' + 4/Math.abs(m_net) + 's drain linear forwards');
             setTimeout(function () {
                 $('.wave'). css('animation', '1s animate linear infinite');
-            }, 5000);
+            }, (4/Math.abs(m_net) + 1)*1000);
         }
     });
     $('#m_out').on('change', function () {
@@ -659,12 +662,16 @@ document.addEventListener('mouseout', function handleMouseOut(e) {
         var m_net = m_in - m_out;
 
         if (m_net > 0) {
-        }
-        else if (m_net < 0) {
-            $('.wave'). css('animation', '1s animate linear infinite, 4s drain linear forwards');
+			$('.wave'). css('animation', '1s animate linear infinite, ' + 4/Math.abs(m_net) + 's overflow linear forwards');
             setTimeout(function () {
                 $('.wave'). css('animation', '1s animate linear infinite');
-            }, 5000);
+            }, (4/Math.abs(m_net) + 1)*1000);
+        }
+        else if (m_net < 0) {
+            $('.wave'). css('animation', '1s animate linear infinite, ' + 4/Math.abs(m_net) + 's drain linear forwards');
+            setTimeout(function () {
+                $('.wave'). css('animation', '1s animate linear infinite');
+            }, (4/Math.abs(m_net) + 1)*1000);
         }
     });
 </script>
