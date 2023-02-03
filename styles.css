@@ -338,7 +338,7 @@ and (min-width: 801px){
     border: 6px solid #262626;
     border-left-style: none;
     border-right-style: none;
-    z-index: 5;
+    z-index: 3;
 }
 .right_inlet
 {
@@ -351,7 +351,7 @@ and (min-width: 801px){
     border: 6px solid #262626;
     border-left-style: none;
     border-right-style: none;
-    z-index: 5;
+    z-index: 3;
 }
 .water
 {
@@ -410,12 +410,6 @@ and (min-width: 801px){
 {
     text-align: center;
 }
-input[type="range"]
-{
-	margin: 0;
-    width: 10%;
-    transform: rotate(-0.25turn);
-}
 .left_slider_label
 {
 	display: inline-block;
@@ -425,4 +419,47 @@ input[type="range"]
 {
 	display: inline-block;
 	width: 12%
+}
+.slider
+{
+    -webkit-appearance: none;
+    width: 104px;
+    height: 10px;
+    background: transparent;
+    outline: none;
+}
+  
+/* Chrome, Safari, and Edge Chromium. */
+  
+.slider::-webkit-slider-thumb
+{
+-webkit-appearance: none;
+appearance: none;
+width: 52px;
+height: 10px;
+background: black;
+cursor: pointer;
+}
+
+/* Firefox */
+
+.slider::-moz-range-thumb
+{
+width: 52px;
+height: 10px;
+background: black;
+cursor: pointer;
+}
+
+#m_in
+{
+    position: relative;
+    transform: rotate(-0.25turn) translateY(2150%) translateX(40%);
+    z-index: 5;
+}
+#m_out
+{
+    position: relative;
+    transform: rotate(-0.25turn) translateY(-2150%) translateX(40%);
+    z-index: 10;
 }
