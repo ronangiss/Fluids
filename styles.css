@@ -413,12 +413,14 @@ and (min-width: 801px){
 .left_slider_label
 {
 	display: inline-block;
-	width: 12%
+	width: 12%;
+    transform: translateX(60%);
 }
 .right_slider_label
 {
 	display: inline-block;
-	width: 12%
+	width: 12%;
+    transform: translateX(-60%);
 }
 .slider
 {
