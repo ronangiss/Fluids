@@ -631,9 +631,41 @@ document.addEventListener('mouseout', function handleMouseOut(e) {
 });
 </script>
 <script type="text/javascript">
+    // var clock = 0;
+    // var timeout = 5000;
+    // var listening = false;
+    // $('#m_in').on('change', function () {
+    //     listening = true;
+    //     while (listening)
+    //     {
+    //         setTimeout(function () {
+    //             if (clock == timeout)
+    //             {
+    //                 listening = false;
+    //                 clock = 0;
+    //                 console.log("exiting");
+    //             }
+    //             else
+    //             {
+    //                 var m_in = parseInt($('#m_in').val());
+    //                 var m_out = parseInt($('#m_out').val());
+    //                 var m_net = m_in - m_out;
+    //                 var speed = 5 - Math.abs(m_net);
+
+    //                 update_water_height(m_net, speed)
+    //             }
+    //             clock = clock + 100;
+    //         }, 100);
+    //     }
+    // });
+
+    // $('#m_out').on('change', function () {
+
+    // });
+
     $('#m_in').on('change', function () {
         var m_in = parseInt($(this).val());
-        var m_out = parseInt($('#m_out').val())
+        var m_out = parseInt($('#m_out').val());
         var m_net = m_in - m_out;
         var speed = 5 - Math.abs(m_net);
 
@@ -642,11 +674,9 @@ document.addEventListener('mouseout', function handleMouseOut(e) {
 
     $('#m_out').on('change', function () {
         var m_out = parseInt($(this).val());
-        var m_in = parseInt($('#m_in').val())
+        var m_in = parseInt($('#m_in').val());
         var m_net = m_in - m_out;
         var speed = 5 - Math.abs(m_net);
-        console.log(m_net);
-        console.log(speed);
 
         update_water_height(m_net, speed)
     });
@@ -654,7 +684,7 @@ document.addEventListener('mouseout', function handleMouseOut(e) {
     function update_water_height(m_net, speed)
     {
         if (m_net > 0) {
-            $('.wave'). css('animation', '1s animate linear infinite, ' + speed + 's overflow linear forwards');
+            $('.wave').css('animation', '1s animate linear infinite, ' + speed + 's overflow linear forwards');
             setTimeout(function () {
                 $('.wave'). css('animation', '1s animate linear infinite');
                 $('#m_in').val(0);
