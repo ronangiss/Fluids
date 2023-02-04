@@ -38,7 +38,7 @@
 		<h2>Mass Conservation</h2>
         <div id="mass_conservation_animation">
         <div class="left_slider_label">Mass Flowrate In</div>
-        <input type="range" name="slider-fill" class="slider" id="m_in" value="0" min="1" max="5" autocomplete="off">
+        <input type="range" name="slider-fill" class="slider" id="m_in" value="0" min="0" max="4" autocomplete="off">
         <div class="left_inlet"></div>
         <div class="tank">
             <div class="water">
@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="right_inlet"></div>
-        <input type="range" name="slider-fill" class="slider" id="m_out" value="0" min="1" max="5" autocomplete="off">
+        <input type="range" name="slider-fill" class="slider" id="m_out" value="0" min="0" max="4" autocomplete="off">
         <div class="right_slider_label">Mass Flowrate Out</div>
         </div>
 		<div id="equation">
@@ -631,44 +631,45 @@ document.addEventListener('mouseout', function handleMouseOut(e) {
 });
 </script>
 <script type="text/javascript">
-    // var m_in = document.getElementById('m_in');
-    // dh = $(document).height()
-    // m_in.addEventListener('change', function () {
-
-    // })
-
     $('#m_in').on('change', function () {
         var m_in = parseInt($(this).val());
         var m_out = parseInt($('#m_out').val())
         var m_net = m_in - m_out;
+        var speed = 5 - Math.abs(m_net);
 
-        if (m_net > 0) {
-            $('.wave'). css('animation', '1s animate linear infinite, 4s overflow linear forwards');
-            setTimeout(function () {
-                $('.wave'). css('animation', '1s animate linear infinite');
-            }, 5000);
-        }
-        else if (m_net < 0) {
-            $('.wave'). css('animation', '1s animate linear infinite, 4s drain linear forwards');
-            setTimeout(function () {
-                $('.wave'). css('animation', '1s animate linear infinite');
-            }, 5000);
-        }
+        update_water_height(m_net, speed)
     });
+
     $('#m_out').on('change', function () {
         var m_out = parseInt($(this).val());
         var m_in = parseInt($('#m_in').val())
         var m_net = m_in - m_out;
+        var speed = 5 - Math.abs(m_net);
+        console.log(m_net);
+        console.log(speed);
 
+        update_water_height(m_net, speed)
+    });
+
+    function update_water_height(m_net, speed)
+    {
         if (m_net > 0) {
-        }
-        else if (m_net < 0) {
-            $('.wave'). css('animation', '1s animate linear infinite, 4s drain linear forwards');
+            $('.wave'). css('animation', '1s animate linear infinite, ' + speed + 's overflow linear forwards');
             setTimeout(function () {
                 $('.wave'). css('animation', '1s animate linear infinite');
-            }, 5000);
+                $('#m_in').val(0);
+                $('#m_out').val(0);
+            }, speed*1000 + 1000);
         }
-    });
+        else if (m_net < 0) {
+            $('.wave'). css('animation', '1s animate linear infinite, ' + speed + 's drain linear forwards');
+            setTimeout(function () {
+                $('.wave'). css('animation', '1s animate linear infinite');
+                $('#m_in').val(0);
+                $('#m_out').val(0);
+            }, speed*1000 + 1000);
+        }
+    }
 </script>
 <body>
 </html>
