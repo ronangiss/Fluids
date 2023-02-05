@@ -279,7 +279,8 @@ and (min-width: 801px){
 }
 .equation_left {
 	border-radius: 10px;
-  padding: 5px 5px;
+    padding: 5px 5px;
+    position: relative;
 }
 .equation_left_hidden {
 	visibility: hidden;
@@ -318,8 +319,8 @@ and (min-width: 801px){
 }
 .tank
 {
-    margin: 0 0 5% 0;
     display: inline-block;
+    margin: 0 auto;
     position: relative;
     width: 150px;
     height: 200px;
@@ -330,8 +331,10 @@ and (min-width: 801px){
 .left_inlet
 {
     display: inline-block;
+    margin: 0 auto;
     position: relative;
-    transform: translate(7.75%,12%);
+    left: 11.5px;
+    top: 6px;
     width: 150px;
     height: 40px;
     background-color: rgba(0,173,255,1);
@@ -343,8 +346,10 @@ and (min-width: 801px){
 .right_inlet
 {
     display: inline-block;
+    margin: 0 auto;
     position: relative;
-    transform: translate(-7.75%,12%);
+    left: -11.5px;
+    top: 6px;
     width: 150px;
     height: 40px;
     background-color: rgba(0,173,255,1);
@@ -411,19 +416,10 @@ and (min-width: 801px){
 }
 #mass_conservation_animation
 {
+    position: relative;
+    height: 300px;
+    width: 100%;
     text-align: center;
-}
-.left_slider_label
-{
-	display: inline-block;
-	width: 12%;
-    transform: translateX(60%);
-}
-.right_slider_label
-{
-	display: inline-block;
-	width: 12%;
-    transform: translateX(-60%);
 }
 .slider
 {
@@ -459,12 +455,67 @@ cursor: pointer;
 #m_in
 {
     position: relative;
-    transform: rotate(-0.25turn) translateY(2150%) translateX(40%);
+    bottom: 42px;
+    left: 216px;
+    transform: rotate(-0.25turn);
     z-index: 5;
 }
 #m_out
 {
     position: relative;
-    transform: rotate(-0.25turn) translateY(-2150%) translateX(40%);
+    bottom: 42px;
+    left: -216px;
+    transform: rotate(-0.25turn);
     z-index: 10;
 }
+
+.left_slider_label
+{
+    display: inline-block;
+    position: relative;
+    left: 170px;
+    bottom: 0px;
+	width: 100px;
+}
+.right_slider_label
+{
+    display: inline-block;
+	position: relative;
+    right: 170px;
+    bottom: 0px;
+	width: 100px;
+}
+.arrow-right:after {
+    display: inline-block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 15px solid #696969;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    vertical-align: middle;
+    transform: translateY(-10px) translateX(40px);
+  }
+  .arrow-right:before {
+    display: inline-block;
+    width: 30px;
+    height: 6px;
+    background: #696969;
+    content: "";
+    vertical-align: middle;
+    transform: translateY(-10px) translateX(40px);
+  }
+  #left_side_arrow
+  {
+    position: relative;
+    left: 145px;
+    bottom: 5px;
+    z-index: 5;
+  }
+  #right_side_arrow
+  {
+    position: relative;
+    right: 225px;
+    bottom: 5px;
+    z-index: 5;
+  }

@@ -17,7 +17,9 @@
 <body>
 <header role='banner' id = "mainTitle">
 <!-- Add background image for title -->
-	<h1>Rónán's Online Fluids Notes</h1>
+	<h1>Fluid Fluency</h1>
+    <h2>An Online Repository for Fluid Physics Notes</h2>
+    <h2>by Rónán Gissler</h2>
 	<nav role='navigation' class='pageNav'>
 				<ul>
 					<li>
@@ -31,13 +33,26 @@
 <main role='main'>
 	<article role='article'>
 		<section id="intro">
-			<h2>Introduction</h2>
-			<p>&emsp;&emsp;Place to store fluids notes, hopefully this is useful to others as well.</p>
+			<h3>Introduction</h3>
+			<p>&emsp;&emsp;
+                This repository is a place for me and you to review core fluid
+                physics concepts. You still need a textbook to learn the material
+                in the first place, but if you're like me and you've learn it
+                before but can't remember it now, this website is for you.
+            </p>
+            <p>&emsp;&emsp;
+                This website was inspired by 
+                <a href="https://tutorial.math.lamar.edu/">Paul's Online Math Notes</a>
+                and seeks to make fluid physics education more accesible through
+                the use of interactive features available in javascript and not
+                in a traditional textbook hardcopy or pdf.
+            </p>
 		</section>
 		<section>
-		<h2>Mass Conservation</h2>
+		<h3>Mass Conservation</h3>
         <div id="mass_conservation_animation">
-        <div class="left_slider_label">Mass Flowrate In</div>
+        <span class="left_slider_label">Mass Flowrate In</span>
+        <span class="arrow-right" id="left_side_arrow"></span>
         <input type="range" name="slider-fill" class="slider" id="m_in" value="0" min="0" max="4" autocomplete="off">
         <div class="left_inlet"></div>
         <div class="tank">
@@ -49,7 +64,8 @@
         </div>
         <div class="right_inlet"></div>
         <input type="range" name="slider-fill" class="slider" id="m_out" value="0" min="0" max="4" autocomplete="off">
-        <div class="right_slider_label">Mass Flowrate Out</div>
+        <span class="arrow-right" id="right_side_arrow"></span>
+        <span class="right_slider_label">Mass Flowrate Out</span>
         </div>
 		<div id="equation">
 			<div class="equation_left_hidden">
@@ -140,7 +156,7 @@
 			Looking at this expression we can see that when the fluid is incompressible, the lagrangian/material derivative of density will be zero so in an incompressible fluid the divergence of the velocity field must be zero.
 		</section>
 		<section>
-		<h2>Momentum Conservation</h2>
+		<h3>Momentum Conservation</h3>
 		$$\rho\frac{dv}{dt} + \rho(v \cdot \nabla)v = \rho f - \nabla P + \nabla \cdot [\sigma ']$$
 			<math display="block">
 				<mrow>
@@ -216,7 +232,7 @@
 			</math>
 		</section>
 		<section>
-		<h2>Energy Conservation</h2>
+		<h3>Energy Conservation</h3>
 			<math display="block">
 				<mrow>
 					<mfrac>
@@ -492,8 +508,8 @@
 			</math>
 		</section>
 		<section>
-		<h2>Bernoulli's Equation</h2>
-		<h3>Steady Flow</h3>
+		<h3>Bernoulli's Equation</h3>
+		<h4>Steady Flow</h4>
 			<math display="block">
 				<mrow>
 					<mo>(</mo>
@@ -543,7 +559,7 @@
 				    <mi>φ</mi>
 				</mrow>
 			</math>
-		<h3>Potential Flow</h3>
+		<h4>Potential Flow</h4>
 			<math display="block">
 				<mrow>
 					<mo>∇</mo>

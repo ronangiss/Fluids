@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Water Fill on Scroll</title>
+    <script src="jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <div class="info"><a href="http://www.google.com" class="arrow1">
+        Learn about our technology<span class="arrow-right"></span>
+      </a></div>
+</body>
+<style>
+.arrow-right:after {
+  content: "";
+  display: inline-block !important;
+  width: 0;
+  height: 0;
+  border-left: 15px solid #C8A962;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  vertical-align: middle;
+
+}
+
+.arrow-right:before {
+  width: 30px;
+  height: 6px;
+  background: #C8A962;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+}
+</style>
+
+</html>
