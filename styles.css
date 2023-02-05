@@ -373,6 +373,9 @@ and (min-width: 801px){
     background: url(water_v2.png);
     animation: 1s animate linear infinite;
 }
+:root {
+    --water-height: 30%;
+  }  
 @keyframes animate
 {
     0%
@@ -388,7 +391,7 @@ and (min-width: 801px){
 {
     0%
     {
-        top: 30%;
+        top: var(--water-height);
     }
     100%
     {
@@ -399,7 +402,7 @@ and (min-width: 801px){
 {
     0%
     {
-        top: 30%;
+        top: var(--water-height);
     }
     100%
     {
