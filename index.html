@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="description" content="Homepage for Rónán Gissler's Projects in Mechanical Engineering">
 <meta name="google-site-verification" content="a5yGE61wbLl2nfdXtS-jhn2NdsYSYXnah-SQnvN8668" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Home</title>
 <link href="https://fonts.cdnfonts.com/css/latin-modern-roman" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -52,9 +53,10 @@
 		<h3>Mass Conservation</h3>
         <div id="mass_conservation_animation">
         <span class="left_slider_label">Mass Flowrate In</span>
-        <span class="arrow-right" id="left_side_arrow"></span>
-        <input type="range" name="slider-fill" class="slider" id="m_in" value="0" min="0" max="4" autocomplete="off">
-        <div class="left_inlet"></div>
+        <div class="left_inlet">
+            <div class="arrow-right" id="left_side_arrow"></div>
+            <input type="range" name="slider-fill" class="slider" id="m_in" value="0" min="0" max="4" autocomplete="off">
+        </div>
         <div class="tank">
             <div class="water">
                 <div class="wave">
@@ -62,9 +64,10 @@
                 </div>
             </div>
         </div>
-        <div class="right_inlet"></div>
-        <input type="range" name="slider-fill" class="slider" id="m_out" value="0" min="0" max="4" autocomplete="off">
-        <span class="arrow-right" id="right_side_arrow"></span>
+        <div class="right_inlet">
+            <input type="range" name="slider-fill" class="slider" id="m_out" value="0" min="0" max="4" autocomplete="off">
+            <div class="arrow-right" id="right_side_arrow"></div>
+        </div>
         <span class="right_slider_label">Mass Flowrate Out</span>
         </div>
 		<div id="equation">

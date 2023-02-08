@@ -8,7 +8,7 @@ html {
 					
 	}
 body {
-	width: 75%; /* page content fills 70% of page width*/
+	width: 80%; /* page content fills 80% of page width*/
 	margin: 0 auto; /* top/bottom left/right */
 	font: 100% Tahoma, Geneva, sans-serif; /*100% is basically same as 1em*/
 }
@@ -322,8 +322,8 @@ and (min-width: 801px){
     display: inline-block;
     margin: 0 auto;
     position: relative;
-    width: 150px;
-    height: 200px;
+    width: 15%;
+    height: 70%;
     border: 6px solid #262626;
     border-top: 2px solid transparent;
     z-index: 1;
@@ -333,10 +333,10 @@ and (min-width: 801px){
     display: inline-block;
     margin: 0 auto;
     position: relative;
-    left: 11.5px;
-    top: 6px;
-    width: 150px;
-    height: 40px;
+    left: 6px;
+    bottom: 11.25%;
+    width: 12%;
+    height: 15%;
     background-color: rgba(0,173,255,1);
     border: 6px solid #262626;
     border-left-style: none;
@@ -348,10 +348,10 @@ and (min-width: 801px){
     display: inline-block;
     margin: 0 auto;
     position: relative;
-    left: -11.5px;
-    top: 6px;
-    width: 150px;
-    height: 40px;
+    left: -6px;
+    bottom: 11.25%;
+    width: 12%;
+    height: 15%;
     background-color: rgba(0,173,255,1);
     border: 6px solid #262626;
     border-left-style: none;
@@ -416,14 +416,15 @@ and (min-width: 801px){
 }
 #mass_conservation_animation
 {
+    font-size: 0;
     position: relative;
-    height: 300px;
+    height: 400px;
     text-align: center;
 }
 .slider
 {
     -webkit-appearance: none;
-    width: 104px;
+    width: 140px;
     height: 10px;
     background: transparent;
     outline: none;
@@ -435,7 +436,7 @@ and (min-width: 801px){
 {
 -webkit-appearance: none;
 appearance: none;
-width: 52px;
+width: 70px;
 height: 10px;
 background: black;
 cursor: pointer;
@@ -445,7 +446,7 @@ cursor: pointer;
 
 .slider::-moz-range-thumb
 {
-width: 52px;
+width: 70px;
 height: 10px;
 background: black;
 cursor: pointer;
@@ -453,36 +454,36 @@ cursor: pointer;
 
 #m_in
 {
-    position: relative;
-    bottom: 42px;
-    left: 216px;
+    position: absolute;
+    bottom: 58px;
+    right: -66px;
     transform: rotate(-0.25turn);
     z-index: 5;
 }
 #m_out
 {
-    position: relative;
-    bottom: 42px;
-    left: -216px;
+    position: absolute;
+    bottom: 58px;
+    left: -66px;
     transform: rotate(-0.25turn);
     z-index: 10;
 }
 
 .left_slider_label
 {
+    font-size: 16px;
     display: inline-block;
     position: relative;
-    left: 170px;
     bottom: 0px;
-	width: 100px;
+	width: 10%;
 }
 .right_slider_label
 {
+    font-size: 16px;
     display: inline-block;
 	position: relative;
-    right: 170px;
     bottom: 0px;
-	width: 100px;
+	width: 10%;
 }
 .arrow-right:after {
     display: inline-block;
@@ -493,28 +494,39 @@ cursor: pointer;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
     vertical-align: middle;
-    transform: translateY(-10px) translateX(40px);
   }
   .arrow-right:before {
     display: inline-block;
-    width: 30px;
+    width: 20%;
     height: 6px;
     background: #696969;
     content: "";
     vertical-align: middle;
-    transform: translateY(-10px) translateX(40px);
   }
   #left_side_arrow
   {
     position: relative;
-    left: 145px;
-    bottom: 5px;
+    right: 25%;
+    top: 25%;
     z-index: 5;
   }
   #right_side_arrow
   {
     position: relative;
-    right: 225px;
-    bottom: 5px;
+    left: 25%;
+    top: 25%;
     z-index: 5;
   }
+
+  /* display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    left: 6px;
+    bottom: 10%;
+    width: 12%;
+    height: 15%;
+    background-color: rgba(0,173,255,1);
+    border: 6px solid #262626;
+    border-left-style: none;
+    border-right-style: none;
+    z-index: 3; */
