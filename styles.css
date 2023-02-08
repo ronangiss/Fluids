@@ -474,7 +474,7 @@ cursor: pointer;
     font-size: 16px;
     display: inline-block;
     position: relative;
-    bottom: 0px;
+    bottom: 10px;
 	width: 10%;
 }
 .right_slider_label
@@ -482,7 +482,7 @@ cursor: pointer;
     font-size: 16px;
     display: inline-block;
 	position: relative;
-    bottom: 0px;
+    bottom: 10px;
 	width: 10%;
 }
 .arrow-right:after {
@@ -517,16 +517,3 @@ cursor: pointer;
     top: 25%;
     z-index: 5;
   }
-
-  /* display: inline-block;
-    margin: 0 auto;
-    position: relative;
-    left: 6px;
-    bottom: 10%;
-    width: 12%;
-    height: 15%;
-    background-color: rgba(0,173,255,1);
-    border: 6px solid #262626;
-    border-left-style: none;
-    border-right-style: none;
-    z-index: 3; */
