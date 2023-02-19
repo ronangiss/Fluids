@@ -21,6 +21,7 @@ header {
 }
 section {
 	margin: 2em 0;
+    width: 100%;
 }
 hr {
 	margin: 1em 0;
@@ -248,7 +249,7 @@ and (min-width: 801px){
 	margin-top: 0.5em;
 	margin-bottom: 0em;
 	padding: 0.5%;
-	width: 12%;
+	width: 60px;
 	text-align: center;
 	background-color: indigo;
 }
@@ -313,9 +314,16 @@ and (min-width: 801px){
   margin-left: 2%;
 }
 #equation {
-	display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.MJX-TEX {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 .tank
 {
@@ -439,6 +447,8 @@ appearance: none;
 width: 70px;
 height: 10px;
 background: black;
+border: 1px solid #c0bfbf;
+border-radius: 10px;
 cursor: pointer;
 }
 
@@ -446,9 +456,12 @@ cursor: pointer;
 
 .slider::-moz-range-thumb
 {
+    appearance: none;
 width: 70px;
 height: 10px;
 background: black;
+border: 1px solid #c0bfbf;
+border-radius: 10px;
 cursor: pointer;
 }
 
