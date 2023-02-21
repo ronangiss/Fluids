@@ -8,7 +8,7 @@ html {
 					
 	}
 body {
-	width: 80%; /* page content fills 80% of page width*/
+	width: 90%; /* page content fills 80% of page width*/
 	margin: 0 auto; /* top/bottom left/right */
 	font: 100% Tahoma, Geneva, sans-serif; /*100% is basically same as 1em*/
 }
@@ -272,9 +272,6 @@ and (min-width: 801px){
 	background: slategray;
 	padding: 2% 15%;
 }
-#intro {
-	width: 80%;
-}
 #intro h2{
 	margin: 0.5em 0;
 }
@@ -328,7 +325,7 @@ and (min-width: 801px){
 .tank
 {
     display: inline-block;
-    margin: 0 auto;
+    margin: 0;
     position: relative;
     width: 15%;
     height: 70%;
@@ -339,7 +336,7 @@ and (min-width: 801px){
 .left_inlet
 {
     display: inline-block;
-    margin: 0 auto;
+    margin: 0;
     position: relative;
     left: 6px;
     bottom: 11.25%;
@@ -354,7 +351,7 @@ and (min-width: 801px){
 .right_inlet
 {
     display: inline-block;
-    margin: 0 auto;
+    margin: 0;
     position: relative;
     left: -6px;
     bottom: 11.25%;
@@ -481,22 +478,29 @@ cursor: pointer;
     transform: rotate(-0.25turn);
     z-index: 10;
 }
-
 .left_slider_label
 {
     font-size: 16px;
-    display: inline-block;
-    position: relative;
-    bottom: 10px;
+    display: inline-flex;
+    position: absolute;
+    left: 15%;
+    bottom: 118px;
 	width: 10%;
+    height: 15%;
+    align-items:center;
+    justify-content:center;
 }
 .right_slider_label
 {
     font-size: 16px;
-    display: inline-block;
-	position: relative;
-    bottom: 10px;
+    display: inline-flex;
+	position: absolute;
+    right: 15%;
+    bottom: 118px;
 	width: 10%;
+    height: 15%;
+    align-items:center;
+    justify-content:center;
 }
 .arrow-right:after {
     display: inline-block;
