@@ -282,15 +282,15 @@ and (min-width: 801px){
 }
 .equation_left_hidden {
 	visibility: hidden;
-  width: 15em;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 10px;
-  padding: 5px 5px;
-  transition: opacity 1s ease-in-out;
+    width: 15em;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 5px;
+    transition: opacity 1s ease-in-out;
 
-  float: left;
+    float: left;
 	margin-right: 2%;
 }
 .equation_right {
@@ -298,7 +298,6 @@ and (min-width: 801px){
   padding: 5px 5px;
 }
 .equation_right_hidden {
-    position: relative;
     visibility: hidden;
     width: 15em;
     background-color: black;
@@ -313,10 +312,10 @@ and (min-width: 801px){
 }
 @media (max-width:1100px) {
     .equation_left_hidden {
-        transform: translate(200px 200px);
+        display: none;
     }
     .equation_right_hidden {
-        display:none;
+        display: none;
     }
 }
 #equation {
