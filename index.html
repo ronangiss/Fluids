@@ -724,8 +724,11 @@ document.addEventListener('mouseout', function handleMouseOut(e) {
             $('.wave').css('animation', '1s animate linear infinite, ' + speed + 's overflow linear forwards');
             setTimeout(function () {
                 $('.wave'). css('animation', '1s animate linear infinite');
+                // reset gate heights
                 $('#m_in').val(0);
                 $('#m_out').val(0);
+                // reset water height
+                $(":root").css("--water-height", '30%');
             }, speed*1000 + 1000);
         }
         else if (m_net < 0) {
@@ -733,9 +736,16 @@ document.addEventListener('mouseout', function handleMouseOut(e) {
             $('.wave'). css('animation', '1s animate linear infinite, ' + speed + 's drain linear forwards');
             setTimeout(function () {
                 $('.wave'). css('animation', '1s animate linear infinite');
+                // reset gate heights
                 $('#m_in').val(0);
                 $('#m_out').val(0);
+                // reset water height
+                $(":root").css("--water-height", '30%');
             }, speed*1000 + 1000);
+        }
+        else {
+            clear_all_timeouts();
+            $('.wave'). css('animation', '1s animate linear infinite');
         }
     }
 
