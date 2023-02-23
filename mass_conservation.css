@@ -97,6 +97,19 @@
         top: -10%;
     }
 }
+#animation_text
+{
+    font-size: 2vw;
+    position: relative;
+    visibility: hidden;
+    left: 4vw;
+    top: 8vw;
+    transform: rotate(-0.05turn);
+    width: 20vw;
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 20px;
+}
 #mass_conservation_animation
 {
     font-size: 0;
@@ -122,7 +135,7 @@ appearance: none;
 width: 70px;
 height: 10px;
 background: black;
-border: 1px solid #c0bfbf;
+border: 2px solid #c0bfbf;
 border-radius: 10px;
 cursor: pointer;
 }
@@ -135,7 +148,7 @@ cursor: pointer;
 width: 70px;
 height: 10px;
 background: black;
-border: 1px solid #c0bfbf;
+border: 2px solid #c0bfbf;
 border-radius: 10px;
 cursor: pointer;
 }

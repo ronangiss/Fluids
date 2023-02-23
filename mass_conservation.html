@@ -10,8 +10,6 @@
 <link href="https://fonts.cdnfonts.com/css/latin-modern-roman" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="mass_conservation.css">
-<!-- jquery -->
-<script src="jquery-3.6.3.min.js"></script>
 <!--mathjax stuff -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -37,25 +35,31 @@
 	<article role='article'>
         <section>
             <h2>Mass Conservation</h2>
-        <div id="mass_conservation_animation">
-            <span class="left_slider_label">Mass Flowrate In&nbsp;&nbsp;</span>
-            <div class="left_inlet">
-                <div class="arrow-right" id="left_side_arrow"></div>
-                <input type="range" name="slider-fill" class="slider" id="m_in" value="0" min="0" max="4" autocomplete="off">
+            <div id="animation_container">
+            <div id="animation_text">
+                Click and drag the gates below to observe the results.
             </div>
-            <div class="tank">
-                <div class="water">
-                    <div class="wave">
-        
+            <div id="mass_conservation_animation">
+                <span class="left_slider_label">Mass Flowrate In&nbsp;&nbsp;</span>
+                <div class="left_inlet">
+                    <div class="arrow-right" id="left_side_arrow"></div>
+                    <input type="range" name="slider-fill" class="slider" id="m_in" value="0" min="0" max="4" autocomplete="off">
+                </div>
+                <div class="tank">
+                    <div class="water">
+                        <div class="wave">
+            
+                        </div>
                     </div>
                 </div>
+                <div class="right_inlet">
+                    <input type="range" name="slider-fill" class="slider" id="m_out" value="0" min="0" max="4" autocomplete="off">
+                    <div class="arrow-right" id="right_side_arrow"></div>
+                </div>
+                <span class="right_slider_label">Mass Flowrate Out</span>
             </div>
-            <div class="right_inlet">
-                <input type="range" name="slider-fill" class="slider" id="m_out" value="0" min="0" max="4" autocomplete="off">
-                <div class="arrow-right" id="right_side_arrow"></div>
             </div>
-            <span class="right_slider_label">Mass Flowrate Out</span>
-            </div>
+
             <div id="equation">
                 <div class="equation_left_hidden">
                     Accumulation term. The rate at which mass is appearing or 
@@ -150,5 +154,9 @@
             </section>
     </article>
 </main>
+<!-- jquery -->
+<script src="jquery-3.6.3.min.js"></script>
+<script src="mass_conservation.js"></script>
+<script src="equation_highlight.js"></script>
 </body>
 </html>
