@@ -1,23 +1,20 @@
 .tank
 {
-    display: inline-block;
     margin: 0;
-    position: relative;
     width: 15%;
-    height: 70%;
+    height: 300px;
     border: 6px solid #262626;
     border-top: 2px solid transparent;
     z-index: 1;
 }
 .left_inlet
 {
-    display: inline-block;
     margin: 0;
     position: relative;
     left: 6px;
-    bottom: 11.25%;
+    top: 118px;
     width: 12%;
-    height: 15%;
+    height: 60px;
     background-color: rgba(0,173,255,1);
     border: 6px solid #262626;
     border-left-style: none;
@@ -26,13 +23,12 @@
 }
 .right_inlet
 {
-    display: inline-block;
     margin: 0;
     position: relative;
     left: -6px;
-    bottom: 11.25%;
+    top: 118px;
     width: 12%;
-    height: 15%;
+    height: 60px;
     background-color: rgba(0,173,255,1);
     border: 6px solid #262626;
     border-left-style: none;
@@ -112,10 +108,12 @@
 }
 #mass_conservation_animation
 {
+    display: flex;
     font-size: 0;
     position: relative;
     height: 400px;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 .slider
 {
@@ -130,14 +128,14 @@
   
 .slider::-webkit-slider-thumb
 {
--webkit-appearance: none;
-appearance: none;
-width: 70px;
-height: 10px;
-background: black;
-border: 2px solid #c0bfbf;
-border-radius: 10px;
-cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 75px;
+    height: 14px;
+    background: black;
+    border: 2px solid #c0bfbf;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 /* Firefox */
@@ -145,12 +143,12 @@ cursor: pointer;
 .slider::-moz-range-thumb
 {
     appearance: none;
-width: 70px;
-height: 10px;
-background: black;
-border: 2px solid #c0bfbf;
-border-radius: 10px;
-cursor: pointer;
+    width: 70px;
+    height: 10px;
+    background: black;
+    border: 2px solid #c0bfbf;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 #m_in
@@ -172,26 +170,28 @@ cursor: pointer;
 .left_slider_label
 {
     font-size: 16px;
-    display: inline-flex;
-    position: absolute;
-    left: 15%;
-    bottom: 118px;
+    position: relative;
+    top: 118px;
 	width: 10%;
     height: 15%;
-    align-items:center;
-    justify-content:center;
+    text-align: center;
+}
+.left_slider_label p
+{
+    padding: 8px 0;
 }
 .right_slider_label
 {
     font-size: 16px;
-    display: inline-flex;
-	position: absolute;
-    right: 15%;
-    bottom: 118px;
+	position: relative;
+    top: 118px;
 	width: 10%;
-    height: 15%;
-    align-items:center;
-    justify-content:center;
+    height: 60px;
+    text-align: center;
+}
+.right_slider_label p
+{
+    padding: 8px 0;
 }
 .arrow-right:after {
     display: inline-block;
@@ -214,6 +214,7 @@ cursor: pointer;
   #left_side_arrow
   {
     position: relative;
+    text-align: center;
     right: 25%;
     top: 25%;
     z-index: 5;
@@ -221,6 +222,7 @@ cursor: pointer;
   #right_side_arrow
   {
     position: relative;
+    text-align: center;
     left: 25%;
     top: 25%;
     z-index: 5;
