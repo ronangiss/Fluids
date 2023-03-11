@@ -204,7 +204,7 @@ and (min-width: 320px){
     }
 }
 @media only screen 
-and (min-width: 801px){
+and (min-width: 800px){
 	.right_slider_label {
         font-size: 16px;
         right: 140px;

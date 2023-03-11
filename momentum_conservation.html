@@ -9,7 +9,6 @@
 <title>Home</title>
 <link href="https://fonts.cdnfonts.com/css/latin-modern-roman" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="mass_conservation.css">
 <!-- jquery -->
 <script src="jquery-3.6.3.min.js"></script>
 <!--mathjax stuff -->
@@ -38,8 +37,60 @@
         <section>
         <h3>Momentum Conservation</h3>
         <div id="equation">
+            <div class="equation_left_hidden">
+                Material derivative of velocity (i.e. how does velocity change 
+                in space and time).
+            </div>
             <math display="block" style="display:inline-block;">
+                <mrow class="equation_left">
+                    <mi>ρ</mi>
+                    <mfrac>
+                    <mrow>
+                        <mi>D</mi>
+                        <mover>
+                            <mi>v</mi>
+                            <mo stretchy="false">→</mo>
+                        </mover>
+                    </mrow>
+                    <mrow>
+                        <mi>D</mi>
+                        <mi>t</mi>
+                    </mrow>
+                    </mfrac>
+                </mrow>
+                <mo>=</mo>
                 <mrow>
+                    <mi>ρ</mi>
+                    <mover>
+                        <mi>f</mi>
+                        <mo stretchy="false">→</mo>
+                     </mover>
+                </mrow>
+                <mo>+</mo>
+                <mrow class="equation_right">
+                    <mo>∇</mo>
+                    <mo>⋅</mo>
+                    <mover>
+                        <mi>σ</mi>
+                        <mo>=</mo>
+                    </mover>
+                </mrow>
+              </math>
+              <div class="equation_right_hidden">
+                Fluid stresses (i.e. how stresses contract or expand the fluid locally).
+            </div>
+            <div class="equation_label">
+                (General Differential Form)
+            </div>
+        </div>
+
+        <div id="equation">
+            <div class="equation_left_hidden">
+                Material derivative of density (i.e. how does density change 
+                in space and time).
+            </div>
+            <math display="block" style="display:inline-block;">
+                <mrow class="equation_left">
                     <mi>ρ</mi>
                     <mfrac>
                     <mrow>
@@ -54,6 +105,8 @@
                         <mi>t</mi>
                     </mrow>
                     </mfrac>
+                </mrow>
+                <mrow>
                     <mo>+</mo>
                     <mi>ρ</mi>
                     <mo form="prefix" stretchy="false">(</mo>
@@ -78,16 +131,23 @@
                     <mo>∇</mo>
                     <mi>P</mi>
                     <mo>+</mo>
+                </mrow>
+                <mrow class="equation_right">
                     <mo>∇</mo>
                     <mo>⋅</mo>
-                    <mo form="prefix" stretchy="false">[</mo>
-                    <msup>
-                        <mi>σ</mi>
-                        <mo lspace="0em" rspace="0em" class="tml-prime">′</mo>
-                    </msup>
-                    <mo form="postfix" stretchy="false">]</mo>
+                    <mover>
+                        <mi>τ</mi>
+                        <mo>=</mo>
+                    </mover>
                 </mrow>
               </math>
+              <div class="equation_right_hidden">
+                Material derivative of density (i.e. how does density change 
+                in space and time).
+            </div>
+            <div class="equation_label">
+                (General Differential Form Expanded)
+            </div>
         </div>
 
         <div id="equation">
@@ -167,5 +227,8 @@
         </section>
     </article>
 </main>
+<!-- jquery -->
+<script src="jquery-3.6.3.min.js"></script>
+<script src="equation_highlight.js"></script>
 </body>
 </html>
