@@ -7,6 +7,7 @@ document.addEventListener('mouseover', function handleMouseOver(e) {
 	}
 	if (e.target.closest(".equation_right")){
 		equation = e.target.closest(".equation_right").parentElement.parentElement.parentElement;
+        equation.querySelector('.equation_label').style.visibility = 'hidden';
 	 	equation.querySelector('.equation_right_hidden').style.visibility = 'visible';
 	 	e.target.closest(".equation_right").style.backgroundColor = "lightgray";
 	}
@@ -22,6 +23,7 @@ document.addEventListener('mouseout', function handleMouseOut(e) {
 	if (e.target.closest(".equation_right")){
 		equation = e.target.closest(".equation_right").parentElement.parentElement.parentElement;
 	 	equation.querySelector('.equation_right_hidden').style.visibility = 'hidden';
+         equation.querySelector('.equation_label').style.visibility = 'visible';
 		e.target.closest(".equation_right").style.backgroundColor = "transparent";
 	}
 });

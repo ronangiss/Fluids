@@ -297,7 +297,7 @@ and (min-width: 801px){
 }
 .equation_right {
 	border-radius: 10px;
-  padding: 5px 5px;
+    padding: 5px 5px;
 }
 .equation_right_hidden {
     visibility: hidden;
@@ -311,6 +311,12 @@ and (min-width: 801px){
 
     float: right;
     margin-left: 2%;
+}
+.equation_label {
+    position: absolute;
+    right: 10%;
+    text-align: center;
+    transition: opacity 1s ease-in-out;
 }
 @media (max-width:1100px) {
     .equation_left_hidden {
