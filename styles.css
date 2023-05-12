@@ -313,12 +313,8 @@ and (min-width: 801px){
     margin-left: 2%;
 }
 .equation_label {
-    position: absolute;
-    right: 10%;
-    width: 20%;
     font-size: 0.9em;
     text-align: center;
-    transition: opacity 1s ease-in-out;
 }
 @media (max-width:1100px) {
     .equation_left_hidden {
@@ -328,15 +324,19 @@ and (min-width: 801px){
         display: none;
     }
 }
-#equation {
+.equation_line {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 20px;
 }
-.MJX-TEX {
+.equation {
+    font-size: 1.3em;
+}
+/* .MJX-TEX {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     gap: 10px;
-}
+} */
