@@ -2,7 +2,12 @@
 $(".equation_left").mouseenter(function(){
     $(this).parent().siblings(".equation_left_hidden").css("visibility", "visible");
     $(this).css("background-color", "lightgray");
-    var fs = $("equation_left").css("height");
+});
+
+$(".equation_middle").mouseenter(function(){
+    $(this).parent().siblings(".equation_left_hidden").css("display", "none");
+    $(this).parent().siblings(".equation_middle_hidden").css("display", "block");
+    $(this).css("background-color", "lightgray");
 });
 
 $(".equation_right").mouseenter(function(){
@@ -14,6 +19,12 @@ $(".equation_right").mouseenter(function(){
 // Hide DIV on mouse out
 $(".equation_left").mouseleave(function(){
     $(this).parent().siblings(".equation_left_hidden").css("visibility", "hidden");
+    $(this).css("background-color", "transparent");
+});
+
+$(".equation_middle").mouseleave(function(){
+    $(this).parent().siblings(".equation_middle_hidden").css("display", "none");
+    $(this).parent().siblings(".equation_left_hidden").css("display", "block");
     $(this).css("background-color", "transparent");
 });
 
