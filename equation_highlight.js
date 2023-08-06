@@ -2,6 +2,7 @@
 $(".equation_left").mouseenter(function(){
     $(this).parent().siblings(".equation_left_hidden").css("visibility", "visible");
     $(this).css("background-color", "lightgray");
+    var fs = $("equation_left").css("height");
 });
 
 $(".equation_right").mouseenter(function(){

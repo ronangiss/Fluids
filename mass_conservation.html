@@ -35,6 +35,20 @@
 	<article role='article'>
         <section>
             <h2>Mass Conservation</h2>
+            <p>&emsp;&emsp;Under most circumstances, mass is neither created or destroyed. Mass can 
+                be transferred into energy such as in nuclear reactions, but this possibility
+                can be ignored for most problems in fluids. Let's imagine a box of
+                arbitrary size and shape such as the tank pictured below. If 
+                the amount of fluid in the box is to be constant the amount of fluid flowing
+                in must be equal to the amount of fluid flowing out. Alternatively, if more
+                fluid is flowing in than is flowing out, the amount of fluid in the tank
+                will increase over time. This form of analysis considering our arbitrary box
+                of fluid is called control volume analysis. It may feel fairly straightforward
+                for mass conservation but control volume analysis is an important tool
+                for fluid physics.</p>
+            <p>&emsp;&emsp;Looking to get a better feel for mass conservation? 
+                Try sliding the vertical gates up and down in the animation below
+                to change the flow rates in or out of the tank.</p>
             <div id="animation_container">
             <div id="animation_text">
                 Click and drag the gates below to observe the results.
@@ -60,6 +74,39 @@
             </div>
             </div>
 
+            <h3>Integral Forms</h3>
+
+            <p>&emsp;&emsp;As we go to transfer this idea of mass conservation to an equation, 
+                it's easiest to start with an integral expression representing 
+                macroscopic movements of fluid such as in the tank pictured above. 
+                The simplest expression would be that the time derivative of mass in
+                our control volume is equal to the difference between the mass flow in and out.</p>
+
+            <div class="equation_line">
+                <span class="equation_left_hidden">
+                    Accumulation term. The rate at which mass is appearing or 
+                    disappearing from the control volume.
+                </span>
+                <span class="equation">
+                    <span class="equation_left">
+                        \( {\dfrac{dm}{dt}} \)
+                    </span>
+                    <span>\( = \)</span>
+                    <span class="equation_right">
+                        \( {\dot{m}_{in} - \dot{m}_{out}} \)
+                    </span>
+                </span>
+                <span class="equation_right_hidden">
+                    Flux term. Mass flow in minus mass flow out.
+                </span>
+            </div>
+            <div class="equation_label">
+                (Simple Form)
+            </div>
+
+            <p>&emsp;&emsp;Advancing one step forward we could rewrite each term as an integral
+                for our control volume box with volume V and surface S.</p>
+
             <div class="equation_line">
                 <span class="equation_left_hidden">
                     Accumulation term. The rate at which mass is appearing or 
@@ -71,7 +118,7 @@
                     </span>
                     <span>\( = \)</span>
                     <span class="equation_right">
-                        \( {\displaystyle \iint_S \rho (\vec{v}\cdot\hat{n}) \;dS} \)
+                        \( {-\displaystyle \iint_S \rho (\vec{v}\cdot\hat{n}) \;dS} \)
                     </span>
                 </span>
                 <span class="equation_right_hidden">
@@ -81,6 +128,14 @@
             <div class="equation_label">
                 (General Integral Form)
             </div>
+
+            <p>&emsp;&emsp;Where \( \rho \) is the density of the fluid (which potentially varies
+                in our control volume), \( \vec{v} \) is the fluid velocity, and  
+                \( \hat{n} \) is the normal vector of the control surface (i.e.
+                surface of control volume)&mdash;pointing outwards. Check for yourself that
+                the dot product results in mass flow in being positive and mass flow out being negative.</p>
+
+            <h3>Differential Forms</h3>
 
             <div class="equation_line">
                 <span class="equation_left_hidden">
@@ -104,6 +159,10 @@
             <div class="equation_label">
                 (General Differential Form)
             </div>
+
+            <p>&emsp;&emsp;Expanding the material/lagrangian derivative of density into its
+                time component and space component, we can rewrite the equation as
+                follows.</p>
 
             <div class="equation_line">
                 <span class="equation_left_hidden">
@@ -132,6 +191,12 @@
                 (General Differential Form)
             </div>
 
+            <p>&emsp;&emsp;If we assume that the fluid is incompressible (i.e. the fluid density
+                is constant in space and time), then the material derivative of density
+                is zero. This results in the simple expression that for an incompressible
+                fluid the divergence of the velocity field is zero.
+            </p>
+
             <div class="equation_line">
                 <span class="equation">
                     <span>
@@ -143,6 +208,9 @@
             <div class="equation_label">
                 (Incompressible Differential Form)
             </div>
+
+            <p>&emsp;&emsp;In Cartesian coordinates, the divergence of the velocity field would
+                be written as follows.</p>
 
             <div class="equation_line">
                 <span class="equation">

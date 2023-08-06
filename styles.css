@@ -3,8 +3,7 @@
 	padding: 0;
 }
 html {
-		background: linear-gradient(-45deg, rgba(0, 130, 230, 0.5), rgba(0, 130, 230, 0) 70%),
-					linear-gradient(45deg, rgba(165, 110, 190, 0.5), rgba(165, 110, 190, 0) 70%);
+		background: whitesmoke;
 					
 	}
 body {
@@ -28,6 +27,9 @@ hr {
 	height: 3px;
 	border-style: none;
 	background-color: maroon;
+}
+p {
+    line-height: 1.5;
 }
 ul {
 	margin-left: 5%;
@@ -66,6 +68,7 @@ h2 {
 	margin: 0;
 }
 h3 {
+    margin: 1em;
 	font-size: 1.3em;
 	font-weight: bold;
 	color: navy;
@@ -278,6 +281,7 @@ and (min-width: 801px){
 	margin: 0.5em 0;
 }
 .equation_left {
+    display: inline-flex;
 	border-radius: 10px;
     padding: 5px 5px;
     position: relative;
@@ -296,8 +300,10 @@ and (min-width: 801px){
 	margin-right: 2%;
 }
 .equation_right {
+    display: inline-flex;
 	border-radius: 10px;
     padding: 5px 5px;
+    position: relative;
 }
 .equation_right_hidden {
     visibility: hidden;
@@ -313,6 +319,7 @@ and (min-width: 801px){
     margin-left: 2%;
 }
 .equation_label {
+    margin-bottom: 0.8em;
     font-size: 0.9em;
     text-align: center;
 }
