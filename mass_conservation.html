@@ -33,8 +33,8 @@
 </header>
 <main role='main'>
 	<article role='article'>
-        <section>
             <h2>Mass Conservation</h2>
+            <section>
             <p>&emsp;&emsp;Under most circumstances, mass is neither created or destroyed. Mass can 
                 be transferred into energy such as in nuclear reactions, but this possibility
                 can be ignored for most problems in fluids. Let's imagine a box of
@@ -73,7 +73,9 @@
                 <div class="right_slider_label"><p>Mass Flowrate Out</p></div>
             </div>
             </div>
+            </section>
 
+            <section>
             <h3>Integral Forms</h3>
 
             <p>&emsp;&emsp;As we go to transfer this idea of mass conservation to an equation, 
@@ -104,8 +106,56 @@
                 (Simple Form)
             </div>
 
-            <p>&emsp;&emsp;Advancing one step forward we could rewrite each term as an integral
-                for our control volume box with volume V and surface S.</p>
+            <div class="equation_line">
+                <span class="equation_left_hidden">
+                    Accumulation term. The rate at which mass is appearing or 
+                    disappearing from the control volume.
+                </span>
+                <span class="equation">
+                    <span class="equation_left">
+                        \( {\dfrac{dm}{dt}} \)
+                    </span>
+                    <span>\( = \)</span>
+                    <span class="equation_right">
+                        \( {{\rho}_{in}{A}_{in}{v}_{in} - {\rho}_{out}{A}_{out}{v}_{out}} \)
+                    </span>
+                </span>
+                <span class="equation_right_hidden">
+                    Flux term. Mass flow in minus mass flow out.
+                </span>
+            </div>
+            <div class="equation_label">
+                (Simple Form &mdash; One Inlet and One Outlet)
+            </div>
+
+            <div class="equation_line">
+                <span class="equation_left_hidden">
+                    Accumulation term. The rate at which mass is appearing or 
+                    disappearing from the control volume.
+                </span>
+                <span class="equation">
+                    <span class="equation_left">
+                        \( {\dfrac{dm}{dt}} \)
+                    </span>
+                    <span>\( = \)</span>
+                    <span class="equation_right">
+                        \( {\sum\limits_{i=1}^n {\rho}_{i}{A}_{i}{v}_{i} - \sum\limits_{j=1}^m {\rho}_{j}{A}_{j}{v}_{j}} \)
+                    </span>
+                </span>
+                <span class="equation_right_hidden">
+                    Flux term. Mass flow in minus mass flow out.
+                </span>
+            </div>
+            <div class="equation_label">
+                (Simple Form &mdash; Multiple Inlets and Multiple Outlets)
+            </div>
+
+            <p>&emsp;&emsp;It's worth noting that \( dm/dt \) can often
+                be ignored since we are frequently interested in problems where the
+                fluid is incompressible in a closed system such that the amount of
+                mass in the system isn't changing in time. Advancing one step forward
+                we could rewrite each term as an integral for our control volume
+                box with volume V and surface S.</p>
 
             <div class="equation_line">
                 <span class="equation_left_hidden">
@@ -135,6 +185,9 @@
                 surface of control volume)&mdash;pointing outwards. Check for yourself that
                 the dot product results in mass flow in being positive and mass flow out being negative.</p>
 
+            </section>
+
+            <section>
             <h3>Differential Forms</h3>
 
             <p>&emsp;&emsp;Although the integral form of mass conservation may be more intuitive, 
@@ -235,6 +288,19 @@
                 (Incompressible Differential Form)
             </div>
             
+            </section>
+
+            <section>
+                <div class="everyday_app">
+                    <h3>Everyday Applications</h3>
+                    <p>One interesting consequence of mass conservation can be seen
+                        when constricting and thus accelerating the flow of an incompressible
+                        fluid like water. If you ever have put your finger over the
+                        end of a hose, you know the water will spray faster and farther
+                        the more you cover the end of the hose.
+                    </p>
+                </div>
+
             </section>
     </article>
 </main>

@@ -252,3 +252,21 @@ and (min-width: 800px){
     top: 25%;
     z-index: 5;
   }
+  .everyday_app
+  {
+    background-color: lightgrey;
+    padding: 15px 0 15px 0;
+    margin: 0 auto 0 auto;
+    width: 85%;
+    border-radius: 20px;
+  }
+  .everyday_app h3
+  {
+    text-align: center;
+    margin: 0;
+  }
+  .everyday_app p
+  {
+    margin: 0 auto 0 auto;
+    width: 70%;
+  }

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Homepage for Rónán Gissler's Projects in Mechanical Engineering">
+<meta name="google-site-verification" content="a5yGE61wbLl2nfdXtS-jhn2NdsYSYXnah-SQnvN8668" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Home</title>
+<link href="https://fonts.cdnfonts.com/css/latin-modern-roman" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="mass_conservation.css">
+<!--mathjax stuff -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<header role='banner' id = "mainTitle">
+<!-- Add background image for title -->
+	<h1>Fluid Fluency</h1>
+    <h2>An Online Repository for Fluid Physics Notes</h2>
+    <h2>by Rónán Gissler</h2>
+	<nav role='navigation' class='pageNav'>
+				<ul>
+					<li>
+						<a href="./index.html" title="Home Page">
+						Home
+						</a>
+					</li>
+				</ul>
+			</nav>
+</header>
+<main role='main'>
+	<article role='article'>
+        <section>
+            <h2>Energy Conservation</h2>
+            <p>&emsp;&emsp;This page has yet to be populated.</p>
+                <div id="equation">
+                    <math display="block">
+                        <mrow>
+                            <mfrac>
+                                <mi>∂</mi>
+                                <mrow>
+                                    <mi>∂</mi>
+                                    <mi>t</mi>
+                                  </mrow>
+                            </mfrac>
+                            <mo>(</mo>
+                            <mfrac>
+                                <mrow>
+                                    <mi>ρ</mi>
+                                    <msup>
+                                        <mi>v</mi>
+                                        <mn>2</mn>
+                                    </msup>
+                                  </mrow>
+                                  <mn>2</mn>
+                            </mfrac>
+                            <mo>)</mo>
+                        </mrow>
+                        <mo>=</mo>
+                          <mrow>
+                              <mo>-</mo>
+                              <mo>∇</mo>
+                            <mo>⋅</mo>
+                            <mo>[</mo>
+                            <mover>
+                                  <mi>v</mi>
+                                  <mo stretchy="false">→</mo>
+                            </mover>
+                            <mo>(</mo>
+                            <mfrac>
+                                <mrow>
+                                    <mi>ρ</mi>
+                                    <msup>
+                                        <mi>v</mi>
+                                        <mn>2</mn>
+                                    </msup>
+                                  </mrow>
+                                  <mn>2</mn>
+                            </mfrac>
+                            <mo>+</mo>
+                            <mi>P</mi>
+                            <mo>)</mo>
+                            <mo>-</mo>
+                            <mo>(</mo>
+                            <mo>[</mo>
+                            <msup>
+                                <mi>σ</mi>
+                                <mo>'</mo>
+                            </msup>
+                            <mo>]</mo>
+                            <mo>⋅</mo>
+                            <mover>
+                                  <mi>v</mi>
+                                  <mo stretchy="false">→</mo>
+                            </mover>
+                            <mo>)</mo>
+                            <mo>]</mo>
+                        </mrow>
+                        <mrow>
+                            <mo>+</mo>
+                            <mi>ρ</mi>
+                            <mover>
+                                  <mi>v</mi>
+                                  <mo stretchy="false">→</mo>
+                            </mover>
+                            <mo>⋅</mo>
+                            <mover>
+                                  <mi>f</mi>
+                                  <mo stretchy="false">→</mo>
+                            </mover>
+                        </mrow>
+                            <mo>-</mo>
+                        <mrow>
+                            <msub>
+                                <msup>
+                                    <mi>σ</mi>
+                                    <mo>'</mo>
+                                </msup>
+                                <mrow>
+                                    <mi>i</mi>
+                                    <mi>j</mi>
+                                </mrow>
+                            </msub>
+                            <mfrac>
+                                <mrow>
+                                    <mi>∂</mi>
+                                    <msub>
+                                        <mi>v</mi>
+                                        <mi>i</mi>
+                                    </msub>
+                                  </mrow>
+                                <mrow>
+                                    <mi>∂</mi>
+                                    <msub>
+                                        <mi>x</mi>
+                                        <mi>j</mi>
+                                    </msub>
+                                  </mrow>
+                            </mfrac>
+                          </mrow>
+                    </math>
+                    </div>
+        
+                    <div id="equation">
+                    <math display="block">
+                        <mrow>
+                            <mfrac>
+                                <mrow>
+                                    <mi>d</mi>
+                                  </mrow>
+                                <mrow>
+                                    <mi>d</mi>
+                                    <mi>t</mi>
+                                  </mrow>
+                            </mfrac>
+                            <msub>
+                                <mo movablelimits="false">∭</mo>
+                                <mi>V</mi>
+                            </msub>
+                            <mfrac>
+                                <mrow>
+                                    <mi>ρ</mi>
+                                    <msup>
+                                        <mi>v</mi>
+                                        <mn>2</mn>
+                                    </msup>
+                                  </mrow>
+                                  <mn>2</mn>
+                            </mfrac>
+                            <mspace width="0.2778em"></mspace>
+                            <mi>d</mi>
+                            <mi>V</mi>
+                        </mrow>
+                        <mo>=</mo>
+                        <mo>−</mo>
+                        <mrow>
+                            <msub>
+                                  <mo movablelimits="false">∬</mo>
+                                  <mi>S</mi>
+                            </msub>
+                            <mfrac>
+                                <mrow>
+                                    <mi>ρ</mi>
+                                    <msup>
+                                        <mi>v</mi>
+                                        <mn>2</mn>
+                                    </msup>
+                                  </mrow>
+                                  <mn>2</mn>
+                            </mfrac>
+                            <mo>(</mo>
+                            <mover>
+                                  <mi>v</mi>
+                                  <mo stretchy="false">→</mo>
+                            </mover>
+                            <mo>⋅</mo>
+                            <mover>
+                                  <mi>n</mi>
+                                  <mo stretchy="false">^</mo>
+                            </mover>
+                            <mo>)</mo>
+                            <mspace width="0.2778em"></mspace>
+                            <mi>d</mi>
+                            <mi>S</mi>
+                        </mrow>
+                        <mo>−</mo>
+                        <mrow>
+                            <msub>
+                                  <mo movablelimits="false">∬</mo>
+                                  <mi>S</mi>
+                            </msub>
+                            <mi>P</mi>
+                            <mo>(</mo>
+                            <mover>
+                                  <mi>v</mi>
+                                  <mo stretchy="false">→</mo>
+                            </mover>
+                            <mo>⋅</mo>
+                            <mover>
+                                  <mi>n</mi>
+                                  <mo stretchy="false">^</mo>
+                            </mover>
+                            <mo>)</mo>
+                            <mspace width="0.2778em"></mspace>
+                            <mi>d</mi>
+                            <mi>S</mi>
+                          </mrow>
+                          <mo>+</mo>
+                          <mrow>
+                            <msub>
+                                  <mo movablelimits="false">∬</mo>
+                                  <mi>S</mi>
+                            </msub>
+                            <mo>(</mo>
+                            <mo>[</mo>
+                            <msup>
+                                <mi>σ</mi>
+                                <mo>'</mo>
+                            </msup>
+                            <mo>]</mo>
+                            <mo>⋅</mo>
+                            <mover>
+                                  <mi>n</mi>
+                                  <mo stretchy="false">^</mo>
+                            </mover>
+                            <mo>)</mo>
+                            <mo>⋅</mo>
+                            <mover>
+                                  <mi>v</mi>
+                                  <mo stretchy="false">→</mo>
+                            </mover>
+                            <mspace width="0.2778em"></mspace>
+                            <mi>d</mi>
+                            <mi>S</mi>
+                          </mrow>
+                          <mo>+</mo>
+                          <mrow>
+                            <msub>
+                                <mo movablelimits="false">∭</mo>
+                                <mi>V</mi>
+                            </msub>
+                            <mi>ρ</mi>
+                            <mover>
+                                  <mi>f</mi>
+                                  <mo stretchy="false">→</mo>
+                            </mover>
+                            <mo>⋅</mo>
+                            <mover>
+                                  <mi>v</mi>
+                                  <mo stretchy="false">→</mo>
+                            </mover>
+                            <mspace width="0.2778em"></mspace>
+                            <mi>d</mi>
+                            <mi>V</mi>
+                        </mrow>
+                        <mo>-</mo>
+                        <mrow>
+                            <msub>
+                                <mo movablelimits="false">∭</mo>
+                                <mi>V</mi>
+                            </msub>
+                            <msub>
+                                <msup>
+                                    <mi>σ</mi>
+                                    <mo>'</mo>
+                                </msup>
+                                <mrow>
+                                    <mi>i</mi>
+                                    <mi>j</mi>
+                                </mrow>
+                            </msub>
+                            <mfrac>
+                                <mrow>
+                                    <mi>∂</mi>
+                                    <msub>
+                                        <mi>v</mi>
+                                        <mi>i</mi>
+                                    </msub>
+                                  </mrow>
+                                <mrow>
+                                    <mi>∂</mi>
+                                    <msub>
+                                        <mi>x</mi>
+                                        <mi>j</mi>
+                                    </msub>
+                                  </mrow>
+                            </mfrac>
+                            <mspace width="0.2778em"></mspace>
+                            <mi>d</mi>
+                            <mi>V</mi>
+                        </mrow>
+                    </math>
+                    </div>
+            
+            </section>
+    </article>
+</main>
+<!-- jquery -->
+<script src="jquery-3.6.3.min.js"></script>
+<script src="mass_conservation.js"></script>
+<script src="equation_highlight.js"></script>
+</body>
+</html>

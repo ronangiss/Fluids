@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Homepage for Rónán Gissler's Projects in Mechanical Engineering">
+<meta name="google-site-verification" content="a5yGE61wbLl2nfdXtS-jhn2NdsYSYXnah-SQnvN8668" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Home</title>
+<link href="https://fonts.cdnfonts.com/css/latin-modern-roman" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="mass_conservation.css">
+<!--mathjax stuff -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<header role='banner' id = "mainTitle">
+<!-- Add background image for title -->
+	<h1>Fluid Fluency</h1>
+    <h2>An Online Repository for Fluid Physics Notes</h2>
+    <h2>by Rónán Gissler</h2>
+	<nav role='navigation' class='pageNav'>
+				<ul>
+					<li>
+						<a href="./index.html" title="Home Page">
+						Home
+						</a>
+					</li>
+				</ul>
+			</nav>
+</header>
+<main role='main'>
+	<article role='article'>
+        <section>
+            <h2>Bernoulli's Equation</h2>
+            <p>&emsp;&emsp;This page has yet to be populated.</p>
+            
+            <h4>Steady Flow</h4>
+            <div id="equation">
+			<math display="block">
+				<mrow>
+					<mo>(</mo>
+					<mover>
+			      		<mi>v</mi>
+			      		<mo stretchy="false">→</mo>
+			    	</mover>
+			    	<mo>⋅</mo>
+					<mo>∇</mo>
+					<mo>)</mo>
+					<mo>(</mo>
+					<mfrac>
+						<mrow>
+				        	<mi>ρ</mi>
+				        	<msup>
+						    	<mi>v</mi>
+						    	<mn>2</mn>
+						    </msup>
+				      	</mrow>
+				      	<mn>2</mn>
+				    </mfrac>
+				    <mo>+</mo>
+				    <mi>P</mi>
+				    <mo>+</mo>
+				    <mi>ρ</mi>
+				    <mi>φ</mi>
+					<mo>)</mo>
+					<mo>=</mo>
+					<mn>0</mn>
+				</mrow>
+				<mspace width="3em"></mspace>
+				<mrow>
+				    <mi>w</mi>
+				    <mi>h</mi>
+				    <mi>e</mi>
+				    <mi>r</mi>
+				    <mi>e</mi>
+				</mrow>
+				<mspace width="0.4em"></mspace>
+				<mrow>
+					<mover>
+			      		<mi>f</mi>
+			      		<mo stretchy="false">→</mo>
+				    </mover>
+				    <mo>=</mo>
+				    <mo>∇</mo>
+				    <mi>φ</mi>
+				</mrow>
+			</math>
+            </div>
+		<h4>Potential Flow</h4>
+            <div id="equation">
+			<math display="block">
+				<mrow>
+					<mo>∇</mo>
+					<mo>(</mo>
+					<mi>ρ</mi>
+					<mfrac>
+			        	<mrow>
+				        	<mi>∂</mi>
+				        	<mi>Φ</mi>
+				      	</mrow>
+				    	<mrow>
+				        	<mi>∂</mi>
+				        	<mi>t</mi>
+				      	</mrow>
+				    </mfrac>
+				    <mo>+</mo>
+				    <mfrac>
+						<mrow>
+				        	<mi>ρ</mi>
+				        	<msup>
+						    	<mi>v</mi>
+						    	<mn>2</mn>
+						    </msup>
+				      	</mrow>
+				      	<mn>2</mn>
+				    </mfrac>
+				    <mo>+</mo>
+				    <mi>P</mi>
+				    <mo>+</mo>
+				    <mi>ρ</mi>
+				    <mi>φ</mi>
+					<mo>)</mo>
+					<mo>=</mo>
+					<mn>0</mn>
+				</mrow>
+				<mspace width="3em"></mspace>
+				<mrow>
+				    <mi>w</mi>
+				    <mi>h</mi>
+				    <mi>e</mi>
+				    <mi>r</mi>
+				    <mi>e</mi>
+				</mrow>
+				<mspace width="0.4em"></mspace>
+				<mrow>
+					<mover>
+			      		<mi>v</mi>
+			      		<mo stretchy="false">→</mo>
+				    </mover>
+				    <mo>=</mo>
+				    <mo>∇</mo>
+				    <mi>Φ</mi>
+				</mrow>
+			</math>
+            </div>
+            </section>
+    </article>
+</main>
+<!-- jquery -->
+<script src="jquery-3.6.3.min.js"></script>
+<script src="mass_conservation.js"></script>
+<script src="equation_highlight.js"></script>
+</body>
+</html>
