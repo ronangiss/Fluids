@@ -82,3 +82,27 @@ function clear_all_timeouts()
         window.clearTimeout(id); // will do nothing if no timeout with id is present
     }
 }
+
+$(function() {
+    $("#beginner").on("click",function(e) {
+        $("#beginner_content").css("display", "block");
+        $("#intermediate_content").css("display", "none");
+        $("#advanced_content").css("display", "none");
+    });
+});
+
+$(function() {
+    $("#intermediate").on("click",function(e) {
+        $("#beginner_content").css("display", "none");
+        $("#intermediate_content").css("display", "block");
+        $("#advanced_content").css("display", "none");
+    });
+});
+
+$(function() {
+    $("#advanced").on("click",function(e) {
+        $("#beginner_content").css("display", "none");
+        $("#intermediate_content").css("display", "intermediate");
+        $("#advanced_content").css("display", "block");
+    });
+});

@@ -7,16 +7,24 @@ html {
 					
 	}
 body {
-	width: 90%; /* page content fills 80% of page width*/
 	margin: 0 auto; /* top/bottom left/right */
 	font: 100% Tahoma, Geneva, sans-serif; /*100% is basically same as 1em*/
 }
 header {
 	font-family: Palatino, serif; /*following fonts are fallbacks*/
-	font-size: 1em; /*2 times default size of text on browser*/
+	font-size: 1em;
 	font-weight: normal; /*unbolds automatically bolded headings*/
-	margin: 1em 0 .4em; /*top left/right bottom*/
-	padding: 1em 0;
+	margin-bottom: 0.4em;
+	padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+main {
+    font-size: 1.2em;
+    width: 90%; /* page content fills 80% of page width*/
+    padding-left: 4em;
+    padding-right: 4em;
 }
 section {
 	margin: 2em 0;
@@ -275,7 +283,6 @@ and (min-width: 801px){
 	text-align: center;
 	color: maroon;
 	background: slategray;
-	padding: 2% 15%;
 }
 #intro h2{
 	margin: 0.5em 0;
@@ -366,3 +373,27 @@ and (min-width: 801px){
     justify-content: center;
     gap: 10px;
 } */
+.level_select {
+    text-align: center;
+}
+.level {
+    margin-top: 0.5em;
+	margin-bottom: 0em;
+	padding: 0.5%;
+	width: 200px;
+	text-align: center;
+	background-color: indigo;
+    font-size: 1.3em;
+	color: white;
+	text-decoration: none;
+    border-radius: 10px;
+}
+.level:hover {
+	background-color: darkviolet;
+}
+#intermediate_content {
+    display: none;
+}
+#advanced_content {
+    display: none;
+}

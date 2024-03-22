@@ -32,20 +32,37 @@
 			</nav>
 </header>
 <main role='main'>
+    <div class="level_select">
+    <button class="level" id="beginner">
+        Beginner
+    </button>
+    <button class="level" id="intermediate">
+        Intermediate
+    </button>
+    <button class="level" id="advanced">
+        Advanced
+    </button>
+    </div>
 	<article role='article'>
             <h2>Mass Conservation</h2>
+            <div id="beginner_content">
             <section>
-            <p>&emsp;&emsp;Under most circumstances, mass is neither created or destroyed. Mass can 
-                be transferred into energy such as in nuclear reactions, but this possibility
-                can be ignored for most problems in fluids. Let's imagine a box of
+            <p>&emsp;&emsp;Under most circumstances, mass is neither created or destroyed.
+                Therefore, we can say mass is conserved. You are likely already familiar
+                with mass conservation since it's easy to observe day to day. One exception
+                to mass conservation would be nuclear reactions where mass can be
+                transferred into energy. Thankfully most fluid mechanics doesn't
+                rely on nuclear reactions, so we can safely use mass conservation for
+                the problems we'll encounter.</p>
+            <p>&emsp;&emsp;Imagine a box of
                 arbitrary size and shape such as the tank pictured below. If 
-                the amount of fluid in the box is to be constant the amount of fluid flowing
-                in must be equal to the amount of fluid flowing out. Alternatively, if more
+                the amount of fluid in the box is constant in time, the amount of fluid flowing
+                in must be equal to the amount of fluid flowing out. If more
                 fluid is flowing in than is flowing out, the amount of fluid in the tank
-                will increase over time. This form of analysis considering our arbitrary box
+                will increase over time. And vice versa. This form of analysis considering our arbitrary box
                 of fluid is called control volume analysis. It may feel fairly straightforward
                 for mass conservation but control volume analysis is an important tool
-                for fluid physics.</p>
+                for fluid mechanics.</p>
             <p>&emsp;&emsp;Looking to get a better feel for mass conservation? 
                 Try sliding the vertical gates up and down in the animation below
                 to change the flow rates in or out of the tank.</p>
@@ -76,13 +93,12 @@
             </section>
 
             <section>
-            <h3>Integral Forms</h3>
-
-            <p>&emsp;&emsp;As we go to transfer this idea of mass conservation to an equation, 
-                it's easiest to start with an integral expression representing 
-                macroscopic movements of fluid such as in the tank pictured above. 
+            <h3>Mathematical Statement of Mass Conservation</h3>
+            <p>&emsp;&emsp;Let's transfer this idea of mass conservation to an equation. 
                 The simplest expression would be that the time derivative of mass in
-                our control volume is equal to the difference between the mass flow in and out.</p>
+                our control volume is equal to the difference between the mass flow
+                in and out. The dot notation below is used to indicate a time derivative,
+                so \( \dot{m} = \frac{dm}{dt} \).</p>
 
             <div class="equation_line">
                 <span class="equation_left_hidden">
@@ -91,7 +107,7 @@
                 </span>
                 <span class="equation">
                     <span class="equation_left">
-                        \( {\dfrac{dm}{dt}} \)
+                        \( {\dot{m}_{CV}} \)
                     </span>
                     <span>\( = \)</span>
                     <span class="equation_right">
@@ -106,6 +122,32 @@
                 (Simple Form)
             </div>
 
+            <p>&emsp;&emsp;
+                We can rewrite the mass flow rate \( \dot{m} \) in terms of fluid
+                variables if we imagine flow passing through a cross-section A
+                with some velocity v. To go from a volume flow rate to a mass flow
+                rate we can add a factor of density \( \rho \).
+            </p>
+            <div class="equation_line">
+                <span class="equation">
+                    \( \dot{m} = \rho A v \)
+                </span>
+            </div>
+            <img src="mass_flow.png" alt="Mass flow labeled in flow through a pipe" class="center">
+            
+            <p>&emsp;&emsp;
+                <br>
+                If the flow properties are different at the inlet and outlet of a
+                given control volume as in the image below, we can query the
+                properties at those locations when evaluating the mass flow. In
+                the example below, the channel widens from left to right. Therefore,
+                either the density or velocity must change between those two points.
+                Typically, the fluid density is a constant (i.e. the fluid is incompressible)
+                so the velocity must have changed. Since the area increased from left
+                to right, the velocity must have decreased from left to right.
+            </p>
+            <img src="mass_flow_in_out.png" alt="Mass flow at inlet and outlet" class="center">
+
             <div class="equation_line">
                 <span class="equation_left_hidden">
                     Accumulation term. The rate at which mass is appearing or 
@@ -113,7 +155,7 @@
                 </span>
                 <span class="equation">
                     <span class="equation_left">
-                        \( {\dfrac{dm}{dt}} \)
+                        \( {\dot{m}_{CV}} \)
                     </span>
                     <span>\( = \)</span>
                     <span class="equation_right">
@@ -135,7 +177,7 @@
                 </span>
                 <span class="equation">
                     <span class="equation_left">
-                        \( {\dfrac{dm}{dt}} \)
+                        \( {\dot{m}_{CV}} \)
                     </span>
                     <span>\( = \)</span>
                     <span class="equation_right">
@@ -153,9 +195,28 @@
             <p>&emsp;&emsp;It's worth noting that \( dm/dt \) can often
                 be ignored since we are frequently interested in problems where the
                 fluid is incompressible in a closed system such that the amount of
-                mass in the system isn't changing in time. Advancing one step forward
-                we could rewrite each term as an integral for our control volume
-                box with volume V and surface S.</p>
+                mass in the system isn't changing in time.</p>
+            </section>
+
+            <section>
+                <div class="everyday_app">
+                    <h3>Everyday Applications</h3>
+                    <p>One interesting consequence of mass conservation can be seen
+                        when constricting and thus accelerating the flow of an incompressible
+                        fluid like water. If you ever have put your finger over the
+                        end of a hose, you know the water will spray faster and farther
+                        the more you cover the end of the hose.
+                    </p>
+                </div>
+
+            </section>
+            </div>
+
+            <div id="intermediate_content">
+            <section>
+            <h3>Integral Forms</h3>
+
+            
 
             <div class="equation_line">
                 <span class="equation_left_hidden">
@@ -289,19 +350,11 @@
             </div>
             
             </section>
+            </div>
 
-            <section>
-                <div class="everyday_app">
-                    <h3>Everyday Applications</h3>
-                    <p>One interesting consequence of mass conservation can be seen
-                        when constricting and thus accelerating the flow of an incompressible
-                        fluid like water. If you ever have put your finger over the
-                        end of a hose, you know the water will spray faster and farther
-                        the more you cover the end of the hose.
-                    </p>
-                </div>
+            <div id="advanced_content">
 
-            </section>
+            </div>
     </article>
 </main>
 <!-- jquery -->
