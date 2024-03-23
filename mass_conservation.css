@@ -273,7 +273,6 @@ and (min-width: 800px){
 
   /* Puff code from: https://jsfiddle.net/Y7Ek4/22/ */
 #puff {
-    cursor:pointer;
     display:none;
     position:absolute;
     height:40px;

@@ -131,18 +131,53 @@ function animatePoof() {
     animate();
     setTimeout("$('#puff').hide()", frames * frameDelay);
 }
-$(function() {
-    $('.equation_left').click(function(e) {
-        var xOffset = 24;
-        var yOffset = 24;
-        $(this).fadeOut('fast');
-        $('#puff').css({
-            left: e.pageX - xOffset + 'px',
-            top: e.pageY - yOffset + 'px'
-        }).show();
-        animatePoof();
-        // $(this).text("0");
-        // $(this).fadeIn('slow');
-        setTimeout("$('.equation_left_replacement').fadeIn(1000)", 400);
+// var curColor = "rgb(246, 237, 253)";
+curColor = $(function() {
+    $('.equation_assumptions').click(function(e) {
+        // Assumption box clicked
+        if ($(this).css("color") === "rgb(0, 0, 0)"){
+            var newColor = "darkviolet";
+            $(this).css("background-color", newColor);
+            $(this).css("color", "white");
+            var frameSize = 40;
+            var dropped_term = $(this).parent().next().children('.equation').children('.equation_left');
+            var offset = dropped_term.offset();
+            var width = dropped_term.outerWidth();
+            var height = dropped_term.outerHeight();
+
+            var centerX = offset.left + width / 2;
+            var centerY = offset.top + height / 2;
+
+            var posX = centerX - frameSize / 2;
+            var posY = centerY - frameSize / 2;
+            dropped_term.fadeOut('fast');
+            $('#puff').css({
+                left: posX + 'px',
+                top: posY + 'px'
+            }).show();
+            animatePoof();
+            // $(this).text("0");
+            // $(this).fadeIn('slow');
+            setTimeout("$('.equation_left_replacement').fadeIn('slow')", 200);
+        } else { // Assumption box unclicked
+            var newColor = "rgb(246, 237, 253)";
+            $(this).css("background-color", newColor);
+            $(this).css("color", "black");
+            var frameSize = 40;
+            var dropped_term = $(this).parent().next().children('.equation').children('.equation_left');
+
+            $('.equation_left_replacement').fadeOut('fast');
+            // $(this).text("0");
+            // $(this).fadeIn('slow');
+            setTimeout(() => {
+                dropped_term.fadeIn('slow');
+            }, 200);
+        }
+        return newColor;
     });
 });
+// $('.equation_assumptions').hover(function(){
+//     $(this).css("background-color", "rgb(217, 176, 246)");
+//     }, function(){
+//         $(this).css("background-color", curColor);
+// });
