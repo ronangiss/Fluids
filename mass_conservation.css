@@ -270,3 +270,14 @@ and (min-width: 800px){
     margin: 0 auto 0 auto;
     width: 70%;
   }
+
+  /* Puff code from: https://jsfiddle.net/Y7Ek4/22/ */
+#puff {
+    cursor:pointer;
+    display:none;
+    position:absolute;
+    height:40px;
+    width:40px;
+    background: url(mac_puff.png) no-repeat;
+    background-size: 40px;
+}

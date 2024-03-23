@@ -106,3 +106,43 @@ $(function() {
         $("#advanced_content").css("display", "block");
     });
 });
+
+// Original puff code example from https://jsfiddle.net/Y7Ek4/22/
+// Some modifications made
+
+function animatePoof() {
+    var bgTop = 0,
+        frame = 0,
+        frames = 6,
+        frameSize = 40,
+        frameDelay = 80,
+        puff = $('#puff');
+    var animate = function(){
+        if(frame < frames){
+            puff.css({
+                backgroundPosition: "0 "+bgTop+"px"
+            });
+            bgTop = bgTop - frameSize;
+            frame++;
+            setTimeout(animate, frameDelay);
+        }
+    };
+    
+    animate();
+    setTimeout("$('#puff').hide()", frames * frameDelay);
+}
+$(function() {
+    $('.equation_left').click(function(e) {
+        var xOffset = 24;
+        var yOffset = 24;
+        $(this).fadeOut('fast');
+        $('#puff').css({
+            left: e.pageX - xOffset + 'px',
+            top: e.pageY - yOffset + 'px'
+        }).show();
+        animatePoof();
+        // $(this).text("0");
+        // $(this).fadeIn('slow');
+        setTimeout("$('.equation_left_replacement').fadeIn(1000)", 400);
+    });
+});
