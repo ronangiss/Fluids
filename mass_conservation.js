@@ -102,7 +102,7 @@ $(function() {
 $(function() {
     $("#advanced").on("click",function(e) {
         $("#beginner_content").css("display", "none");
-        $("#intermediate_content").css("display", "intermediate");
+        $("#intermediate_content").css("display", "none");
         $("#advanced_content").css("display", "block");
     });
 });
