@@ -306,24 +306,8 @@ and (min-width: 801px){
     float: left;
 	margin-right: 2%;
 }
-.equation_middle {
-    display: inline-flex;
-	border-radius: 10px;
-    padding: 5px 5px;
-    position: relative;
-}
-.equation_middle_hidden {
-    display: none;
-    width: 15em;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 10px;
-    padding: 5px 5px;
-    transition: opacity 1s ease-in-out;
-
-    float: left;
-	margin-right: 2%;
+.equation_hidden_contents {
+	display: none;
 }
 .equation_right {
     display: inline-flex;
@@ -364,6 +348,9 @@ and (min-width: 801px){
     /* padding-top: 20px; */
 }
 .equation {
+	display: flex;
+	align-items: center;
+    justify-content: center;
     font-size: 1.3em;
 	padding: 5px;
 }
