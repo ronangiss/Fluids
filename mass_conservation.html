@@ -129,9 +129,9 @@
                 with some velocity v. To go from a volume flow rate to a mass flow
                 rate we can add a factor of density \( \rho \).
             </p>
-            <div class="equation_line" style="padding-top: 20px">
+            <div class="equation_line">
                 <span class="equation">
-                    \( \dot{m} = \rho A v \)
+                    \( \dot{m} = \rho A \vec{\mathbf{v}} \)
                 </span>
             </div>
             <img src="mass_flow.png" alt="Mass flow labeled in flow through a pipe" class="center">
@@ -168,7 +168,7 @@
                     </span>
                     <span>\( = \)</span>
                     <span class="equation_right">
-                        \( {{\rho}_{in}{A}_{in}{v}_{in} - {\rho}_{out}{A}_{out}{v}_{out}} \)
+                        \( {{\rho}_{in}{A}_{in}{\vec{\mathbf{v}}}_{in} - {\rho}_{out}{A}_{out}{\vec{\mathbf{v}}}_{out}} \)
                     </span>
                 </span>
                 <span class="equation_right_hidden">
@@ -205,7 +205,7 @@
                     </span>
                     <span>\( = \)</span>
                     <span class="equation_right">
-                        \( {\sum\limits_{i=1}^n {\rho}_{i}{A}_{i}{v}_{i} - \sum\limits_{j=1}^m {\rho}_{j}{A}_{j}{v}_{j}} \)
+                        \( {\sum\limits_{i=1}^n {\rho}_{i}{A}_{i}{\vec{\mathbf{v}}}_{i} - \sum\limits_{j=1}^m {\rho}_{j}{A}_{j}{\vec{\mathbf{v}}}_{j}} \)
                     </span>
                 </span>
                 <span class="equation_right_hidden">
@@ -257,7 +257,7 @@
                     </span>
                     <span>\( = \)</span>
                     <span class="equation_right">
-                        \( {-\displaystyle \iint_S \rho (\vec{v}\cdot\hat{n}) \;dS} \)
+                        \( {-\displaystyle \iint_S \rho (\vec{\mathbf{v}}\cdot\hat{n}) \;dS} \)
                     </span>
                 </span>
                 <span class="equation_right_hidden">
@@ -303,7 +303,7 @@
                         
                     </span>
                     <span class="equation_right">
-                        \( (\nabla\cdot\vec{v})\rho \)
+                        \( (\nabla\cdot\vec{\mathbf{v}})\rho \)
                     </span>
                     <span>\( = 0 \)</span>
                 </span>
@@ -337,14 +337,14 @@
                     </span>
                     <span>\( + \)</span>
                     <span class="equation_middle">
-                        \( (\vec{v}\cdot\nabla)\rho \)
+                        \( (\vec{\mathbf{v}}\cdot\nabla)\rho \)
                     </span>
                     <span>\( + \)</span>
                     <span class="equation_left_replacement">
                         
                     </span>
                     <span class="equation_right">
-                        \( (\nabla\cdot\vec{v})\rho \)
+                        \( (\nabla\cdot\vec{\mathbf{v}})\rho \)
                     </span>
                     <span>\( = 0 \)</span>
                 </span>
@@ -365,7 +365,7 @@
             <div class="equation_line">
                 <span class="equation">
                     <span>
-                        \( \nabla\cdot\vec{v} \)
+                        \( \nabla\cdot\vec{\mathbf{v}} \)
                     </span>
                     <span>\( = 0 \)</span>
                 </span>
@@ -388,7 +388,7 @@
                     Spherical
                 </button>
             </div>
-            <div class="equation_line" style="padding-top: 20px">
+            <div class="equation_line" style="padding-top: 10px">
                 <span class="equation">
                     <span class="cartesian_content">
                         \(
@@ -438,7 +438,7 @@
                         </span>
                         <span>\( + \)</span>
                         <span class="equation_right">
-                            \( {\displaystyle \iint_S \rho (\vec{v}\cdot\hat{n}) \;dS} \)
+                            \( {\displaystyle \iint_S \rho (\vec{\mathbf{v}}\cdot\hat{n}) \;dS} \)
                         </span>
                         <span>\( = 0 \)</span>
                     </span>
@@ -460,7 +460,7 @@
                         </span>
                         <span>\( + \)</span>
                         <span class="equation_right">
-                            \( {\displaystyle \iiint_V \nabla\cdot (\rho\vec{v}) \;dV} \)
+                            \( {\displaystyle \iiint_V \nabla\cdot (\rho\vec{\mathbf{v}}) \;dV} \)
                         </span>
                         <span>\( = 0 \)</span>
                     </span>
@@ -481,7 +481,7 @@
                         </span>
                         <span>\( + \)</span>
                         <span class="equation_right">
-                            \( \nabla\cdot (\rho\vec{v}) \)
+                            \( \nabla\cdot (\rho\vec{\mathbf{v}}) \)
                         </span>
                         <span>\(  \;dV = 0 \)</span>
                     </span>
@@ -504,7 +504,7 @@
                         </span>
                         <span>\( + \)</span>
                         <span class="equation_right">
-                            \( \nabla\cdot (\rho\vec{v}) \)
+                            \( \nabla\cdot (\rho\vec{\mathbf{v}}) \)
                         </span>
                         <span>\( = 0 \)</span>
                     </span>

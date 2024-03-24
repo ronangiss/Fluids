@@ -365,6 +365,7 @@ and (min-width: 801px){
 }
 .equation {
     font-size: 1.3em;
+	padding: 5px;
 }
 /* .MJX-TEX {
     display: flex;

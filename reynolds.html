@@ -68,22 +68,109 @@
                 <h3>Physical Interpretations</h3>
             <dl>
                 <dt>Ratio of Inertial to Viscous Effects</dt>
-                <dd>&emsp;&emsp;We can obtain the Reynolds number from the differential form
+                <dd><p>&emsp;&emsp;We can obtain the Reynolds number from the differential form
                     of the Navier-Stokes Equation by using dimensional analysis for the
-                    inertial and viscous terms.
+                    inertial and viscous terms.</p>
                     <div class="equation_line">
                         <span class="equation">
                             <span>
-                                \( \frac{d\underline{\mathbf{v}}}{dt} \)
+                                \( \dfrac{d\vec{\mathbf{v}}}{dt} \)
                             </span>
                             <span>\( + \)</span>
-                            <span>\( (\underline{\mathbf{v}} \cdot \nabla) \underline{\mathbf{v}} \)</span>
+                            <span style="color: orangered">
+                                \( (\vec{\mathbf{v}} \cdot \nabla) \vec{\mathbf{v}} \)
+                            </span>
                             <span>\( = \)</span>
-                            <span>\( - \frac{1}{\rho} \nabla P \)</span>
+                            <span>\( - \dfrac{1}{\rho} \nabla P \)</span>
                             <span>\( + \)</span>
-                            <span>\( \nu \nabla^2 \underline{\mathbf{v}} \)</span>
+                            <span style="color: orangered">
+                                \( \nu \nabla^2 \vec{\mathbf{v}} \)
+                            </span>
                             <span>\( + \)</span>
-                            <span>\( \underline{\mathbf{f}} \)</span>
+                            <span>\( \vec{\mathbf{f}} \)</span>
+                        </span>
+                    </div>
+
+                    <div class="equation_line">
+                        <span class="equation">
+                            <span>
+                                \( (\vec{\mathbf{v}} \cdot \nabla) \vec{\mathbf{v}}
+                                = \left[ \dfrac{U^2}{L} \right] \)
+                            </span>
+                            <span>\( \qquad \)</span>
+                            <span>
+                                \( \nu \nabla^2 \vec{\mathbf{v}} = \left[ \dfrac{\nu U}{L^2} \right] \)
+                            </span>
+                        </span>
+                    </div>
+
+                    <div class="equation_line">
+                        <span class="equation">
+                            <span>
+                                \( Re = \dfrac{(\vec{\mathbf{v}} \cdot \nabla) \vec{\mathbf{v}}}{\nu \nabla^2 \vec{\mathbf{v}}} =
+                                \dfrac{U^{\cancel{2}}/\cancel{L}}{(\nu \cancel{U})/L^{\cancel{2}}}
+                                = \dfrac{U L}{\nu} \)
+                            </span>
+                        </span>
+                    </div>
+                </dd>
+                <dt>Ratio of Inertial to Vsicous Forces</dt>
+                <dd>
+                    <p>&emsp;&emsp;Alternatively, we could obtain the Reynolds number from the
+                    ratio of inertial to viscous forces. The inertial force can be imagined as
+                    a jet impinging on a surface. The jet exerts a pressure on the surface
+                    proportional to \(\rho U^2\) (where U is the velocity of the jet) and the area
+                    of that surface is proportional to \(L^2\) (where L is some lengthscale of the
+                    impact surface). The viscous force can be imagined as a sheet of viscous fluid
+                    rubbing against a surface. The fluid exerts a shear stress on the surface
+                    proportional to \(\frac{\eta U}{L}\) and the area of that surface is again
+                    proportional to some \(L^2\).</p>
+                
+                    <div class="equation_line">
+                        <span class="equation">
+                            <span>
+                                \( F_{inertial} = \rho U^2 L^2 \)
+                            </span>
+                            <span>\( \qquad \)</span>
+                            <span>
+                                \( F_{viscous} = \eta U L \)
+                            </span>
+                        </span>
+                    </div>
+
+                    <div class="equation_line">
+                        <span class="equation">
+                            <span>
+                                \( Re = \dfrac{F_{inertial}}{f_{viscous}}
+                                = \dfrac{\rho U^{\cancel{2}} L^{\cancel{2}}}{\eta \cancel{U} \cancel{L}}
+                                = \dfrac{\rho U L}{\eta} \)
+                            </span>
+                        </span>
+                    </div>
+                </dd>
+                <dt>Ratio of Diffusive to Convective Timescales</dt>
+                <dd>
+                    <p>&emsp;&emsp;</p>
+
+                    <div class="equation_line">
+                        <span class="equation">
+                            <span>
+                                \( t_{diffusive} = \dfrac{L^2}{\nu} \)
+                            </span>
+                            <span>\( \qquad \)</span>
+                            <span>
+                                \( t_{convective} = \dfrac{L}{U} \)
+                            </span>
+                        </span>
+                    </div>
+
+                    <div class="equation_line">
+                        <span class="equation">
+                            <span>
+                                \( Re = \dfrac{t_{diffusive}}{t_{convective}}
+                                = \dfrac{L^{\cancel{2}} / \nu}{\cancel{L} / U}
+                                = \dfrac{U L}{\nu} \)
+                            </span>
                         </span>
                     </div>
                 </dd>
