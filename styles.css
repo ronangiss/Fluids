@@ -413,3 +413,24 @@ and (min-width: 801px){
 	text-decoration: none;
     border-radius: 10px;
 }
+.reference_system{
+	text-align: center;
+    cursor:pointer;
+	width: 110px;
+    padding: 5px;
+	background-color: rgb(246, 237, 253);
+    font-size: 0.6em;
+	color: black;
+	text-decoration: none;
+    border-radius: 10px;
+}
+.reference_system:first-of-type {
+	background-color: darkviolet;
+    color: white;
+}
+.cylindrical_content {
+    display: none;
+}
+.spherical_content {
+    display: none;
+}

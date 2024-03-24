@@ -45,6 +45,7 @@
     </div>
 	<article role='article'>
             <h2>Mass Conservation</h2>
+            <span id="puff"></span>
             <div id="beginner_content">
             <section>
             <p>&emsp;&emsp;Under most circumstances, mass is neither created or destroyed.
@@ -148,6 +149,11 @@
             </p>
             <img src="mass_flow_in_out.png" alt="Mass flow at inlet and outlet" class="center">
 
+            <div class="centerText">
+                <button class="equation_assumptions">
+                Incompressible and Confined 
+                </button>
+            </div>
             <div class="equation_line">
                 <span class="equation_left_hidden">
                     Accumulation term. The rate at which mass is appearing or 
@@ -156,6 +162,9 @@
                 <span class="equation">
                     <span class="equation_left">
                         \( {\dot{m}_{CV}} \)
+                    </span>
+                    <span class="equation_left_replacement">
+                        0
                     </span>
                     <span>\( = \)</span>
                     <span class="equation_right">
@@ -173,7 +182,9 @@
             <p>&emsp;&emsp;It's worth noting that \( {\dot{m}_{CV}} \) can often
                 be ignored since we are frequently interested in problems where the
                 fluid is incompressible in a confined system such that the amount of
-                mass in the system isn't changing in time.</p>
+                mass in the system isn't changing in time. An example, would be the
+                system pictured above. Click the button to activate that
+                assumption and simplify the equation.</p>
 
             <div class="centerText">
                 <button class="equation_assumptions">
@@ -186,7 +197,6 @@
                     disappearing from the control volume.
                 </span>
                 <span class="equation">
-                    <span id="puff"></span>
                     <span class="equation_left">
                         \( {\dot{m}_{CV}} \)
                     </span>
@@ -215,7 +225,9 @@
                         when constricting and thus accelerating the flow of an incompressible
                         fluid like water. If you ever have put your finger over the
                         end of a hose, you know the water will spray faster and farther
-                        the more you cover the end of the hose.
+                        the more you cover the end of the hose. If we assume the mass
+                        flow rate through the hose is constant, the more you reduce the
+                        cross-sectional area A, the greater the velocity v becomes.
                     </p>
                 </div>
 
@@ -226,8 +238,11 @@
             <section>
             <h3>Integral Forms</h3>
 
-            
-
+            <div class="centerText">
+                <button class="equation_assumptions">
+                Incompressible
+                </button>
+            </div>
             <div class="equation_line">
                 <span class="equation_left_hidden">
                     Accumulation term. The rate at which mass is appearing or 
@@ -236,6 +251,9 @@
                 <span class="equation">
                     <span class="equation_left">
                         \( {\displaystyle \iiint_V \dfrac{\partial\rho}{\partial{t}} \;dV} \)
+                    </span>
+                    <span class="equation_left_replacement">
+                        0
                     </span>
                     <span>\( = \)</span>
                     <span class="equation_right">
@@ -266,6 +284,11 @@
                 for an infinitesimal volume of fluid.
             </p>  
 
+            <div class="centerText">
+                <button class="equation_assumptions">
+                Incompressible
+                </button>
+            </div>
             <div class="equation_line">
                 <span class="equation_left_hidden">
                     Material derivative of density (i.e. how does density change 
@@ -276,6 +299,9 @@
                         \( \dfrac{D\rho}{D{t}} \)
                     </span>
                     <span>\( + \)</span>
+                    <span class="equation_left_replacement">
+                        
+                    </span>
                     <span class="equation_right">
                         \( (\nabla\cdot\vec{v})\rho \)
                     </span>
@@ -293,6 +319,11 @@
                 time component and space component, we can rewrite the equation as
                 follows.</p>
 
+            <div class="centerText">
+                <button class="equation_assumptions">
+                Incompressible
+                </button>
+            </div>
             <div class="equation_line">
                 <span class="equation_left_hidden">
                     Time derivative of density.
@@ -309,6 +340,9 @@
                         \( (\vec{v}\cdot\nabla)\rho \)
                     </span>
                     <span>\( + \)</span>
+                    <span class="equation_left_replacement">
+                        
+                    </span>
                     <span class="equation_right">
                         \( (\nabla\cdot\vec{v})\rho \)
                     </span>
@@ -343,18 +377,46 @@
             <p>&emsp;&emsp;In Cartesian coordinates, the divergence of the velocity field would
                 be written as follows.</p>
 
-            <div class="equation_line">
+            <div class="level_select">
+                <button class="reference_system">
+                    Cartesian
+                </button>
+                <button class="reference_system">
+                    Cylindrical
+                </button>
+                <button class="reference_system">
+                    Spherical
+                </button>
+            </div>
+            <div class="equation_line" style="padding-top: 20px">
                 <span class="equation">
-                    <span>
+                    <span class="cartesian_content">
                         \(
                         \dfrac{\partial{v_x}}{\partial{x}} + 
                         \dfrac{\partial{v_y}}{\partial{y}} + 
                         \dfrac{\partial{v_z}}{\partial{z}}
                         \)
                     </span>
+                    <span class="cylindrical_content">
+                        \(
+                        \dfrac{1}{r} \dfrac{\partial{(r v_r)}}{\partial{r}} + 
+                        \dfrac{1}{r} \dfrac{\partial{v_{\phi}}}{\partial{\phi}} + 
+                        \dfrac{\partial{v_z}}{\partial{z}}
+                        \)
+                    </span>
+                    <span class="spherical_content">
+                        \(
+                        \dfrac{1}{r^2} \dfrac{\partial{(r^2 v_r)}}{\partial{r}} + 
+                        \dfrac{1}{r \sin\theta} \dfrac{\partial{(\sin(\theta) v_\theta)}}{\partial{\theta}} +
+                        \dfrac{1}{r \sin(\theta)} \dfrac{\partial{v_\phi}}{\partial{\phi}}
+                        \)
+                    </span>
                     <span>\( = 0 \)</span>
                 </span>
             </div>
+            
+            <div class="cylindrical_content"></div>
+            <div class="spherical_content"></div>
             <div class="equation_label">
                 (Incompressible Differential Form)
             </div>

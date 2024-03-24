@@ -83,6 +83,8 @@ function clear_all_timeouts()
     }
 }
 
+// Click functionality of level select blocks
+
 $(function() {
     $("#beginner").on("click",function(e) {
         $("#beginner_content").css("display", "block");
@@ -104,6 +106,45 @@ $(function() {
         $("#beginner_content").css("display", "none");
         $("#intermediate_content").css("display", "none");
         $("#advanced_content").css("display", "block");
+    });
+});
+
+// Click functionality of reference system select blocks
+
+$(function() {
+    $(".reference_system").on("click",function(e) {
+        var content_string = $(this).text().trim();
+        if (content_string === "Cartesian") {
+            $(".cartesian_content").css("display", "inline");
+            $(".cylindrical_content").css("display", "none");
+            $(".spherical_content").css("display", "none");
+
+            $(this).css("background-color", "darkviolet");
+            $(this).css("color", "white");
+
+            $(this).siblings().css("background-color", "rgb(246, 237, 253)");
+            $(this).siblings().css("color", "black");
+        } else if (content_string === "Cylindrical") {
+            $(".cartesian_content").css("display", "none");
+            $(".cylindrical_content").css("display", "inline");
+            $(".spherical_content").css("display", "none");
+
+            $(this).css("background-color", "darkviolet");
+            $(this).css("color", "white");
+
+            $(this).siblings().css("background-color", "rgb(246, 237, 253)");
+            $(this).siblings().css("color", "black");
+        } else if (content_string === "Spherical") {
+            $(".cartesian_content").css("display", "none");
+            $(".cylindrical_content").css("display", "none");
+            $(".spherical_content").css("display", "inline");
+
+            $(this).css("background-color", "darkviolet");
+            $(this).css("color", "white");
+
+            $(this).siblings().css("background-color", "rgb(246, 237, 253)");
+            $(this).siblings().css("color", "black");
+        }
     });
 });
 
@@ -140,7 +181,15 @@ curColor = $(function() {
             $(this).css("background-color", newColor);
             $(this).css("color", "white");
             var frameSize = 40;
-            var dropped_term = $(this).parent().next().children('.equation').children('.equation_left');
+            var zero_term = $(this).parent().next().children('.equation').children('.equation_left_replacement');
+            var equation_pieces = $(this).parent().next().children('.equation').children();
+
+            // Fade out all terms before zero term
+            for (var i = 0; i < zero_term.index(); i++){
+                equation_pieces.eq(i).fadeOut('fast');
+            }
+
+            dropped_term = equation_pieces.eq(0);
             var offset = dropped_term.offset();
             var width = dropped_term.outerWidth();
             var height = dropped_term.outerHeight();
@@ -150,7 +199,7 @@ curColor = $(function() {
 
             var posX = centerX - frameSize / 2;
             var posY = centerY - frameSize / 2;
-            dropped_term.fadeOut('fast');
+
             $('#puff').css({
                 left: posX + 'px',
                 top: posY + 'px'
@@ -158,19 +207,25 @@ curColor = $(function() {
             animatePoof();
             // $(this).text("0");
             // $(this).fadeIn('slow');
-            setTimeout("$('.equation_left_replacement').fadeIn('slow')", 200);
+            setTimeout(() => {
+                zero_term.fadeIn('slow');
+            }, 200);
         } else { // Assumption box unclicked
             var newColor = "rgb(246, 237, 253)";
             $(this).css("background-color", newColor);
             $(this).css("color", "black");
             var frameSize = 40;
-            var dropped_term = $(this).parent().next().children('.equation').children('.equation_left');
+            var zero_term = $(this).parent().next().children('.equation').children('.equation_left_replacement');
+            var equation_pieces = $(this).parent().next().children('.equation').children();
 
-            $('.equation_left_replacement').fadeOut('fast');
+            zero_term.fadeOut('fast');
             // $(this).text("0");
             // $(this).fadeIn('slow');
             setTimeout(() => {
-                dropped_term.fadeIn('slow');
+                // Fade in all terms before zero term
+                for (var i = 0; i < zero_term.index(); i++){
+                    equation_pieces.eq(i).fadeIn('slow');
+                }
             }, 200);
         }
         return newColor;
