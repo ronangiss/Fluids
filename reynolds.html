@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Reynolds Number Page">
+<meta name="google-site-verification" content="a5yGE61wbLl2nfdXtS-jhn2NdsYSYXnah-SQnvN8668" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Home</title>
+<link href="https://fonts.cdnfonts.com/css/latin-modern-roman" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="reynolds.css">
+<!--mathjax stuff -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<header role='banner' id = "mainTitle">
+<!-- Add background image for title -->
+	<h1>Fluid Fluency</h1>
+    <h2>An Online Repository for Fluid Physics Notes</h2>
+    <h2>by Rónán Gissler</h2>
+	<nav role='navigation' class='pageNav'>
+				<ul>
+					<li>
+						<a href="./index.html" title="Home Page">
+						Home
+						</a>
+					</li>
+				</ul>
+			</nav>
+</header>
+<main role='main'>
+    <div class="level_select">
+    <button class="level" id="beginner">
+        Beginner
+    </button>
+    <button class="level" id="intermediate">
+        Intermediate
+    </button>
+    <button class="level" id="advanced">
+        Advanced
+    </button>
+    </div>
+	<article role='article'>
+            <h2>Reynolds Number</h2>
+            <div id="beginner_content">
+            <section>
+            <h3>Mathematical Definition</h3>
+
+            <div class="equation_line">
+                <span class="equation">
+                    <span>
+                        \[ Re = \frac{\rho U L}{\eta} = \frac{U L}{\nu} \]
+                    </span>
+                </span>
+            </div>
+            <p>&emsp;&emsp;where \(\rho\) is the fluid's density, \(U\) is some characteristic
+            speed such as the average speed of the bulk flow, \(L\) is some characteristic
+            length (diameter of a cylinder in the flow, chordlength of an airfoil, etc.),
+            \(\eta\) is the fluid's dynamic viscosity, and \(\nu\) is the fluid's kinematic
+            viscosity.</p>
+
+            </section>
+
+            <section>
+                <h3>Physical Interpretations</h3>
+            <dl>
+                <dt>Ratio of Inertial to Viscous Effects</dt>
+                <dd>&emsp;&emsp;We can obtain the Reynolds number from the differential form
+                    of the Navier-Stokes Equation by using dimensional analysis for the
+                    inertial and viscous terms.
+                    <div class="equation_line">
+                        <span class="equation">
+                            <span>
+                                \( \frac{d\underline{\mathbf{v}}}{dt} \)
+                            </span>
+                            <span>\( + \)</span>
+                            <span>\( (\underline{\mathbf{v}} \cdot \nabla) \underline{\mathbf{v}} \)</span>
+                            <span>\( = \)</span>
+                            <span>\( - \frac{1}{\rho} \nabla P \)</span>
+                            <span>\( + \)</span>
+                            <span>\( \nu \nabla^2 \underline{\mathbf{v}} \)</span>
+                            <span>\( + \)</span>
+                            <span>\( \underline{\mathbf{f}} \)</span>
+                        </span>
+                    </div>
+                </dd>
+            </ul>
+            </section>
+
+            <div id="intermediate_content">
+            <section>
+            <h3>Integral Forms</h3>
+
+            </section>
+            </div>
+
+            <div id="advanced_content">
+            <section>
+            <h3>Derivation of the Differential Form</h3>
+            </section>
+
+            </div>
+    </article>
+</main>
+<!-- jquery -->
+<script src="jquery-3.6.3.min.js"></script>
+<script src="reynolds.js"></script>
+<script src="buttons.js"></script>
+<script src="equation_highlight.js"></script>
+</body>
+</html>

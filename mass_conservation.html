@@ -425,13 +425,101 @@
             </div>
 
             <div id="advanced_content">
+            <section>
+                <h3>Derivation of the Differential Form</h3>
+                <div class="equation_line">
+                    <span class="equation_left_hidden">
+                        Accumulation term. The rate at which mass is appearing or 
+                        disappearing from the control volume.
+                    </span>
+                    <span class="equation">
+                        <span class="equation_left">
+                            \( {\displaystyle \iiint_V \dfrac{\partial\rho}{\partial{t}} \;dV} \)
+                        </span>
+                        <span>\( + \)</span>
+                        <span class="equation_right">
+                            \( {\displaystyle \iint_S \rho (\vec{v}\cdot\hat{n}) \;dS} \)
+                        </span>
+                        <span>\( = 0 \)</span>
+                    </span>
+                    <span class="equation_right_hidden">
+                        Flux term. Mass flow in minus mass flow out.
+                    </span>
+                </div>
 
+                <p>Rewriting, using Gauss's Divergence theorem:</p>
+
+                <div class="equation_line">
+                    <span class="equation_left_hidden">
+                        Accumulation term. The rate at which mass is appearing or 
+                        disappearing from the control volume.
+                    </span>
+                    <span class="equation">
+                        <span class="equation_left">
+                            \( {\displaystyle \iiint_V \dfrac{\partial\rho}{\partial{t}} \;dV} \)
+                        </span>
+                        <span>\( + \)</span>
+                        <span class="equation_right">
+                            \( {\displaystyle \iiint_V \nabla\cdot (\rho\vec{v}) \;dV} \)
+                        </span>
+                        <span>\( = 0 \)</span>
+                    </span>
+                    <span class="equation_right_hidden">
+                        Flux term. Mass flow in minus mass flow out.
+                    </span>
+                </div>
+
+                <div class="equation_line">
+                    <span class="equation_left_hidden">
+                        Accumulation term. The rate at which mass is appearing or 
+                        disappearing from the control volume.
+                    </span>
+                    <span class="equation">
+                        <span>\( \displaystyle \iiint_V \)</span>
+                        <span class="equation_left">
+                            \( \dfrac{\partial\rho}{\partial{t}} \)
+                        </span>
+                        <span>\( + \)</span>
+                        <span class="equation_right">
+                            \( \nabla\cdot (\rho\vec{v}) \)
+                        </span>
+                        <span>\(  \;dV = 0 \)</span>
+                    </span>
+                    <span class="equation_right_hidden">
+                        Flux term. Mass flow in minus mass flow out.
+                    </span>
+                </div>
+
+                <p>Since this integral must equal zero for any arbitrary control volume,
+                    we know the integrand must also be zero:</p>
+
+                <div class="equation_line">
+                    <span class="equation_left_hidden">
+                        Accumulation term. The rate at which mass is appearing or 
+                        disappearing from the control volume.
+                    </span>
+                    <span class="equation">
+                        <span class="equation_left">
+                            \( \dfrac{\partial\rho}{\partial{t}} \)
+                        </span>
+                        <span>\( + \)</span>
+                        <span class="equation_right">
+                            \( \nabla\cdot (\rho\vec{v}) \)
+                        </span>
+                        <span>\( = 0 \)</span>
+                    </span>
+                    <span class="equation_right_hidden">
+                        Flux term. Mass flow in minus mass flow out.
+                    </span>
+                </div>
+            </section>
             </div>
     </article>
 </main>
 <!-- jquery -->
 <script src="jquery-3.6.3.min.js"></script>
 <script src="mass_conservation.js"></script>
+<script src="buttons.js"></script>
 <script src="equation_highlight.js"></script>
 </body>
 </html>

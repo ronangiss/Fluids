@@ -434,3 +434,6 @@ and (min-width: 801px){
 .spherical_content {
     display: none;
 }
+dt {
+	font-weight: bold;
+}
