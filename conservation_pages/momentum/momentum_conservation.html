@@ -24,7 +24,7 @@
 	<nav role='navigation' class='pageNav'>
 				<ul>
 					<li>
-						<a href="index.html" title="Home Page">
+						<a href="../../index.html" title="Home Page">
 						Home
 						</a>
 					</li>
@@ -33,306 +33,349 @@
 </header>
 <main role='main'>
 	<article role='article'>
-        <section>
-        <h3>Momentum Conservation</h3>
-        <div class="equation_line">
-            <span class="equation_left_hidden">
-                Material derivative of velocity (i.e. how does velocity change 
-                in space and time).
-            </span>
-            <span class="equation">
-                <span class="equation_left">
-                \( \rho\dfrac{D\vec{v}}{Dt} \)
-                </span>
-                <span>\( = \)</span>
-                <span>
-                \( \rho\vec{f} \)
-                </span>
-                <span>\( + \)</span>
-                <span class="equation_right">
-                \( \nabla\cdot\overline{\overline{\sigma}} \)
-                </span>
-            </span>
-            <span class="equation_right_hidden">
-                Fluid stresses (i.e. how stresses contract or expand the fluid locally).
-            </span>      
-        </div>
-        <div class="equation_label">
-            (General Differential Form in Vector Notation)
-        </div>
-
-        <div class="equation_line">
-            <span class="equation_left_hidden">
-                Material derivative of density (i.e. how does density change 
-                in space and time).
-            </span>
-            <span class="equation">
-                <span class="equation_left">
-                \( \rho\dfrac{d\vec{v}}{dt} \)
-                </span>
-                <span>\( + \)</span>
-                <span>
-                    \( \rho(\vec{v}\cdot\nabla)\vec{v} \)
-                </span>
-                <span>\( = \)</span>
-                <span>
-                    \( \rho\vec{f} \)
-                </span>
-                <span>\( + \)</span>
-                <span class="equation_right">
-                    \( \nabla\cdot\overline{\overline{\sigma}} \)
-                </span>
-            </span>
-            <span class="equation_right_hidden">
-                Material derivative of density (i.e. how does density change 
-                in space and time).
-            </span>
-        </div>
-        <div class="equation_label">
-            (General Differential Form in Vector Notation)
-        </div>
-
-        <div class="equation_line">
-            <span class="equation_left_hidden">
-                Material derivative of density (i.e. how does density change 
-                in space and time).
-            </span>
-            <span class="equation">
-                <span class="equation_left">
-                \( \rho\dfrac{d\vec{v}}{dt} \)
-                </span>
-                <span>\( + \)</span>
-                <span>
-                    \( \rho(\vec{v}\cdot\nabla)\vec{v} \)
-                </span>
-                <span>\( = \)</span>
-                <span>
-                    \( \rho\vec{f} \)
-                </span>
-                <span>\( - \)</span>
-                <span>
-                    \( \nabla P \)
-                </span>
-                <span>\( + \)</span>
-                <span class="equation_right">
-                    \( \nabla\cdot\overline{\overline{\tau}} \)
-                </span>
-            </span>
-            <span class="equation_right_hidden">
-                Material derivative of density (i.e. how does density change 
-                in space and time).
-            </span>
-        </div>
-        <div class="equation_label">
-            (Incompressible Differential Form in Vector Notation)
-        </div>
-
-        <div class="equation_line">
-            <span class="equation_left_hidden">
-                Material derivative of density (i.e. how does density change 
-                in space and time).
-            </span>
-            <span class="equation">
-                <span class="equation_left">
-                \( \rho\dfrac{d\vec{v}}{dt} \)
-                </span>
-                <span>\( + \)</span>
-                <span>
-                    \( \rho(\vec{v}\cdot\nabla)\vec{v} \)
-                </span>
-                <span>\( = \)</span>
-                <span>
-                    \( \rho\vec{f} \)
-                </span>
-                <span>\( - \)</span>
-                <span>
-                    \( \nabla P \)
-                </span>
-                <span>\( + \)</span>
-                <span class="equation_right">
-                    \( \eta\nabla^{2}\vec{v} \)
-                </span>
-            </span>
-            <span class="equation_right_hidden">
-                Material derivative of density (i.e. how does density change 
-                in space and time).
-            </span>
-        </div>
-        <div class="equation_label">
-            (Incompressible Newtonian Differential Form in Vector Notation)
-        </div>
-
         <div class="level_select">
-            <button class="reference_system">
-                Cartesian
+            <button class="level" id="beginner">
+                Beginner
             </button>
-            <button class="reference_system">
-                Cylindrical
+            <button class="level" id="intermediate">
+                Intermediate
             </button>
-            <button class="reference_system">
-                Spherical
+            <button class="level" id="advanced">
+                Advanced
             </button>
         </div>
-        <div class="cartesian_content">
-        <div class="equation_line">
-            <span class="equation">
-                <span>
-                \( \dfrac{\partial{v_x}}{\partial{t}} \)
+        <h2>Momentum Conservation</h2>
+        <span id="puff"></span>
+        <div id="beginner_content">
+            <section>    
+            <div class="level_select">
+                <button class="reference_system">
+                    Vector
+                </button>
+                <button class="reference_system">
+                    Cartesian
+                </button>
+                <button class="reference_system">
+                    Cylindrical
+                </button>
+                <button class="reference_system">
+                    Spherical
+                </button>
+            </div>
+            
+            <div class="reference_system_contents">
+            <div id="Vector">
+                <div class="equation_line">
+                    <span class="equation_left_hidden">
+                        <span class="equation_hidden_contents">Time derivative of momentum.</span>
+                        <span class="equation_hidden_contents"></span>
+                        <span class="equation_hidden_contents">How the momentum changes along a streamline in the flow.</span>
+                    </span>
+                    <span class="equation">
+                        <span class="equation_left">
+                        \( \rho\dfrac{\partial\vec{v}}{\partial t} \)
+                        </span>
+                        <span>\( + \)</span>
+                        <span class="equation_left">
+                            \( \rho(\vec{v}\cdot\nabla)\vec{v} \)
+                        </span>
+                        <span>\( = \)</span>
+                        <span>\( - \)</span>
+                        <span class="equation_right">
+                            \( \nabla P \)
+                        </span>
+                        <span>\( + \)</span>
+                        <span class="equation_right">
+                            \( \eta\nabla^{2}\vec{v} \)
+                        </span>
+                        <span>\( + \)</span>
+                        <span class="equation_right">
+                            \( \rho\vec{f} \)
+                        </span>
+                    </span>
+                    <span class="equation_right_hidden">
+                        <span class="equation_hidden_contents">Pressure gradient.</span>
+                        <span class="equation_hidden_contents"></span>
+                        <span class="equation_hidden_contents">Viscous term</span>
+                        <span class="equation_hidden_contents"></span>
+                        <span class="equation_hidden_contents">Body forces (e.g. gravity).</span>
+                    </span>
+                </div>
+                <div class="equation_label">
+                    (Incompressible Newtonian Differential Vector Form)
+                </div>
+            </div>
+            <div id="Cartesian" style="display: none;">
+            <div class="equation_line">
+                <span class="equation">
+                    <span>
+                    \( \dfrac{\partial{v_x}}{\partial{t}} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \(
+                        v_x \dfrac{\partial{v_x}}{\partial{x}} + 
+                        v_y \dfrac{\partial{v_x}}{\partial{y}} + 
+                        v_z \dfrac{\partial{v_x}}{\partial{z}}
+                        \)
+                    </span>
+                    <span>\( = \)</span>
+                    <span>
+                        \( -\dfrac{1}{\rho} \dfrac{\partial{P}}{\partial{x}} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \( \nu (
+                        \dfrac{\partial^2{v_x}}{\partial{x}^2} +
+                        \dfrac{\partial^2{v_x}}{\partial{y}^2} + 
+                        \dfrac{\partial^2{v_x}}{\partial{z}^2}
+                        ) \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \( f_x \)
+                    </span>
                 </span>
-                <span>\( + \)</span>
-                <span>
-                    \(
-                    v_x \dfrac{\partial{v_x}}{\partial{x}} + 
-                    v_y \dfrac{\partial{v_x}}{\partial{y}} + 
-                    v_z \dfrac{\partial{v_x}}{\partial{z}}
-                    \)
+            </div>
+    
+            <div class="equation_line">
+                <span class="equation">
+                    <span>
+                    \( \dfrac{\partial{v_y}}{\partial{t}} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \(
+                        v_x \dfrac{\partial{v_y}}{\partial{x}} + 
+                        v_y \dfrac{\partial{v_y}}{\partial{y}} + 
+                        v_z \dfrac{\partial{v_y}}{\partial{z}}
+                        \)
+                    </span>
+                    <span>\( = \)</span>
+                    <span>
+                        \( -\dfrac{1}{\rho} \dfrac{\partial{P}}{\partial{y}} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \( \nu (
+                        \dfrac{\partial^2{v_y}}{\partial{x}^2} +
+                        \dfrac{\partial^2{v_y}}{\partial{y}^2} + 
+                        \dfrac{\partial^2{v_y}}{\partial{z}^2}
+                        ) \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \( f_y \)
+                    </span>
                 </span>
-                <span>\( = \)</span>
-                <span>
-                    \( -\dfrac{1}{\rho} \dfrac{\partial{P}}{\partial{x}} \)
                 </span>
-                <span>\( + \)</span>
-                <span>
-                    \( \nu (
-                    \dfrac{\partial^2{v_x}}{\partial{x}^2} +
-                    \dfrac{\partial^2{v_x}}{\partial{y}^2} + 
-                    \dfrac{\partial^2{v_x}}{\partial{z}^2}
-                    ) \)
+            </div>
+    
+            <div class="equation_line">
+                <span class="equation">
+                    <span>
+                    \( \dfrac{\partial{v_z}}{\partial{t}} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \(
+                        v_x \dfrac{\partial{v_z}}{\partial{x}} + 
+                        v_y \dfrac{\partial{v_z}}{\partial{y}} + 
+                        v_z \dfrac{\partial{v_z}}{\partial{z}}
+                        \)
+                    </span>
+                    <span>\( = \)</span>
+                    <span>
+                        \( -\dfrac{1}{\rho} \dfrac{\partial{P}}{\partial{z}} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \( \nu (
+                        \dfrac{\partial^2{v_z}}{\partial{x}^2} +
+                        \dfrac{\partial^2{v_z}}{\partial{y}^2} + 
+                        \dfrac{\partial^2{v_z}}{\partial{z}^2}
+                        ) \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \( f_z \)
+                    </span>
                 </span>
-                <span>\( + \)</span>
-                <span>
-                    \( f_x \)
+            </div>
+
+            <p>&emsp;&emsp;
+                Compared to cylindrical or spherical form, the pattern between component equations is
+                more clear in cartesian form. To make this pattern further apparent see the terms
+                highlighted in red below. For the y-momentum equation simply replace every red x with
+                a y. Likewise, for the z-momentum equation replace every red x with a z.
+            </p>
+
+            <div class="equation_line" id="NS_component_demo">
+                <span class="equation">
+                    <span>
+                    \( \dfrac{\partial{v_{\color{red}x}}}{\partial{t}} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \(
+                        v_x \dfrac{\partial{v_{\color{red}x}}}{\partial{x}} + 
+                        v_y \dfrac{\partial{v_{\color{red}x}}}{\partial{y}} + 
+                        v_z \dfrac{\partial{v_{\color{red}x}}}{\partial{z}}
+                        \)
+                    </span>
+                    <span>\( = \)</span>
+                    <span>
+                        \( -\dfrac{1}{\rho} \dfrac{\partial{P}}{\partial{{\color{red}x}}} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \( \nu (
+                        \dfrac{\partial^2{v_{\color{red}x}}}{\partial{x}^2} +
+                        \dfrac{\partial^2{v_{\color{red}x}}}{\partial{y}^2} + 
+                        \dfrac{\partial^2{v_{\color{red}x}}}{\partial{z}^2}
+                        ) \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \( f_{\color{red}x} \)
+                    </span>
                 </span>
-            </span>
+            </div>
+            <div class="equation_label">
+                (Incompressible Newtonian Differential Form in Cartesian Coordinates)
+            </div>
+            </div>
+    
+            <div id="Cylindrical" style="display: none;">
+                <div class="equation_label">
+                    (Incompressible Newtonian Differential Form in Cylindrical Coordinates)
+                </div>
+            </div>
+    
+            <div id="Spherical" style="display: none;">
+                <div class="equation_label">
+                    (Incompressible Newtonian Differential Form in Spherical Coordinates)
+                </div>
+            </div>
+            </div>
+    
+            <div class="equation_line">
+                <span class="equation">
+                    <span class="equation_left">
+                    \( \dfrac{d}{dt} {\displaystyle \iiint_V \rho\vec{v} \;dV} \)
+                    </span>
+                    <span>\( = \)</span>
+                    <span>
+                        \( {\displaystyle \iint_S \rho\vec{v} (\vec{v}\cdot\hat{n}) + P\hat{n} - \overline{\overline{\tau}}\cdot\hat{n} \;dS} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span class="equation_right">
+                        \( {\displaystyle \iiint_V \rho\vec{f} \;dV} \)
+                    </span>
+                </span>
+            </div>
+            <div class="equation_label">
+                (General Integral Form in Vector Notation)
+            </div>
+            </section>
+        </div>
+        <div id="intermediate_content">
+        
+        </div>
+        <div id="advanced_content">
+            <div class="equation_line">
+                <span class="equation_left_hidden">
+                    Material derivative of velocity (i.e. how does velocity change 
+                    in space and time).
+                </span>
+                <span class="equation">
+                    <span class="equation_left">
+                    \( \rho\dfrac{D\vec{v}}{Dt} \)
+                    </span>
+                    <span>\( = \)</span>
+                    <span>
+                    \( \rho\vec{f} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span class="equation_right">
+                    \( \nabla\cdot\overline{\overline{\sigma}} \)
+                    </span>
+                </span>
+                <span class="equation_right_hidden">
+                    Fluid stresses (i.e. how stresses contract or expand the fluid locally).
+                </span>      
+            </div>
+            <div class="equation_label">
+                (General Differential Form in Vector Notation)
+            </div>
+    
+            <div class="equation_line">
+                <span class="equation_left_hidden">
+                    Material derivative of density (i.e. how does density change 
+                    in space and time).
+                </span>
+                <span class="equation">
+                    <span class="equation_left">
+                    \( \rho\dfrac{d\vec{v}}{dt} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \( \rho(\vec{v}\cdot\nabla)\vec{v} \)
+                    </span>
+                    <span>\( = \)</span>
+                    <span>
+                        \( \rho\vec{f} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span class="equation_right">
+                        \( \nabla\cdot\overline{\overline{\sigma}} \)
+                    </span>
+                </span>
+                <span class="equation_right_hidden">
+                    Material derivative of density (i.e. how does density change 
+                    in space and time).
+                </span>
+            </div>
+            <div class="equation_label">
+                (General Differential Form in Vector Notation)
+            </div>
+    
+            <div class="equation_line">
+                <span class="equation_left_hidden">
+                    Material derivative of density (i.e. how does density change 
+                    in space and time).
+                </span>
+                <span class="equation">
+                    <span class="equation_left">
+                    \( \rho\dfrac{d\vec{v}}{dt} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \( \rho(\vec{v}\cdot\nabla)\vec{v} \)
+                    </span>
+                    <span>\( = \)</span>
+                    <span>
+                        \( \rho\vec{f} \)
+                    </span>
+                    <span>\( - \)</span>
+                    <span>
+                        \( \nabla P \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span class="equation_right">
+                        \( \nabla\cdot\overline{\overline{\tau}} \)
+                    </span>
+                </span>
+                <span class="equation_right_hidden">
+                    Material derivative of density (i.e. how does density change 
+                    in space and time).
+                </span>
+            </div>
+            <div class="equation_label">
+                (Incompressible Differential Form in Vector Notation)
+            </div>
         </div>
 
-        <div class="equation_line">
-            <span class="equation">
-                <span>
-                \( \dfrac{\partial{v_y}}{\partial{t}} \)
-                </span>
-                <span>\( + \)</span>
-                <span>
-                    \(
-                    v_x \dfrac{\partial{v_y}}{\partial{x}} + 
-                    v_y \dfrac{\partial{v_y}}{\partial{y}} + 
-                    v_z \dfrac{\partial{v_y}}{\partial{z}}
-                    \)
-                </span>
-                <span>\( = \)</span>
-                <span>
-                    \( -\dfrac{1}{\rho} \dfrac{\partial{P}}{\partial{y}} \)
-                </span>
-                <span>\( + \)</span>
-                <span>
-                    \( \nu (
-                    \dfrac{\partial^2{v_y}}{\partial{x}^2} +
-                    \dfrac{\partial^2{v_y}}{\partial{y}^2} + 
-                    \dfrac{\partial^2{v_y}}{\partial{z}^2}
-                    ) \)
-                </span>
-                <span>\( + \)</span>
-                <span>
-                    \( f_y \)
-                </span>
-            </span>
-            </span>
-        </div>
-
-        <div class="equation_line">
-            <span class="equation">
-                <span>
-                \( \dfrac{\partial{v_z}}{\partial{t}} \)
-                </span>
-                <span>\( + \)</span>
-                <span>
-                    \(
-                    v_x \dfrac{\partial{v_z}}{\partial{x}} + 
-                    v_y \dfrac{\partial{v_z}}{\partial{y}} + 
-                    v_z \dfrac{\partial{v_z}}{\partial{z}}
-                    \)
-                </span>
-                <span>\( = \)</span>
-                <span>
-                    \( -\dfrac{1}{\rho} \dfrac{\partial{P}}{\partial{z}} \)
-                </span>
-                <span>\( + \)</span>
-                <span>
-                    \( \nu (
-                    \dfrac{\partial^2{v_z}}{\partial{x}^2} +
-                    \dfrac{\partial^2{v_z}}{\partial{y}^2} + 
-                    \dfrac{\partial^2{v_z}}{\partial{z}^2}
-                    ) \)
-                </span>
-                <span>\( + \)</span>
-                <span>
-                    \( f_z \)
-                </span>
-            </span>
-        </div>
-        </div>
-
-        <div class="cylindrical_content">
-        </div>
-
-        <div class="spherical_content">
-        </div>
-
-        <div class="equation_label">
-            (Incompressible Newtonian Differential Form in Cartesian Coordinates)
-        </div>
-
-        <div class="equation_line" id="NS_component_demo">
-            <span class="equation">
-                <span>
-                \( \dfrac{\partial{v_{\color{red}x}}}{\partial{t}} \)
-                </span>
-                <span>\( + \)</span>
-                <span>
-                    \(
-                    v_x \dfrac{\partial{v_{\color{red}x}}}{\partial{x}} + 
-                    v_y \dfrac{\partial{v_{\color{red}x}}}{\partial{y}} + 
-                    v_z \dfrac{\partial{v_{\color{red}x}}}{\partial{z}}
-                    \)
-                </span>
-                <span>\( = \)</span>
-                <span>
-                    \( -\dfrac{1}{\rho} \dfrac{\partial{P}}{\partial{{\color{red}x}}} \)
-                </span>
-                <span>\( + \)</span>
-                <span>
-                    \( \nu (
-                    \dfrac{\partial^2{v_{\color{red}x}}}{\partial{x}^2} +
-                    \dfrac{\partial^2{v_{\color{red}x}}}{\partial{y}^2} + 
-                    \dfrac{\partial^2{v_{\color{red}x}}}{\partial{z}^2}
-                    ) \)
-                </span>
-                <span>\( + \)</span>
-                <span>
-                    \( f_{\color{red}x} \)
-                </span>
-            </span>
-        </div>
-
-        <div class="equation_line">
-            <span class="equation">
-                <span class="equation_left">
-                \( \dfrac{d}{dt} {\displaystyle \iiint_V \rho\vec{v} \;dV} \)
-                </span>
-                <span>\( = \)</span>
-                <span>
-                    \( {\displaystyle \iint_S \rho\vec{v} (\vec{v}\cdot\hat{n}) + P\hat{n} - \overline{\overline{\tau}}\cdot\hat{n} \;dS} \)
-                </span>
-                <span>\( + \)</span>
-                <span class="equation_right">
-                    \( {\displaystyle \iiint_V \rho\vec{f} \;dV} \)
-                </span>
-            </span>
-        </div>
-        <div class="equation_label">
-            (General Integral Form in Vector Notation)
-        </div>
-        </section>
     </article>
 </main>
 <!-- jquery -->

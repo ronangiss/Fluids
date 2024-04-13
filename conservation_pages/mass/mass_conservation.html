@@ -24,7 +24,7 @@
 	<nav role='navigation' class='pageNav'>
 				<ul>
 					<li>
-						<a href="./index.html" title="Home Page">
+						<a href="../../index.html" title="Home Page">
 						Home
 						</a>
 					</li>
@@ -387,23 +387,32 @@
                     Spherical
                 </button>
             </div>
-            <div class="equation_line" style="padding-top: 10px">
+            <div class="reference_system_contents">
+            <div id="Cartesian" class="equation_line" style="padding-top: 10px">
                 <span class="equation">
-                    <span class="cartesian_content">
+                    <span>
                         \(
                         \dfrac{\partial{v_x}}{\partial{x}} + 
                         \dfrac{\partial{v_y}}{\partial{y}} + 
                         \dfrac{\partial{v_z}}{\partial{z}}
                         \)
                     </span>
-                    <span class="cylindrical_content">
+                </span>
+            </div>
+            <div id="Cylindrical" class="equation_line" style="padding-top: 10px; display: none;">
+                <span class="equation">
+                    <span>
                         \(
                         \dfrac{1}{r} \dfrac{\partial{(r v_r)}}{\partial{r}} + 
                         \dfrac{1}{r} \dfrac{\partial{v_{\phi}}}{\partial{\phi}} + 
                         \dfrac{\partial{v_z}}{\partial{z}}
                         \)
                     </span>
-                    <span class="spherical_content">
+                </span>
+            </div>
+            <div id="Spherical" class="equation_line" style="padding-top: 10px; display: none;">
+                <span class="equation">
+                    <span>
                         \(
                         \dfrac{1}{r^2} \dfrac{\partial{(r^2 v_r)}}{\partial{r}} + 
                         \dfrac{1}{r \sin\theta} \dfrac{\partial{(\sin(\theta) v_\theta)}}{\partial{\theta}} +
@@ -413,9 +422,8 @@
                     <span>\( = 0 \)</span>
                 </span>
             </div>
+            </div>
             
-            <div class="cylindrical_content"></div>
-            <div class="spherical_content"></div>
             <div class="equation_label">
                 (Incompressible Differential Form)
             </div>

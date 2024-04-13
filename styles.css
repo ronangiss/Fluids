@@ -416,12 +416,6 @@ and (min-width: 801px){
 	background-color: darkviolet;
     color: white;
 }
-.cylindrical_content {
-    display: none;
-}
-.spherical_content {
-    display: none;
-}
 dt {
 	font-weight: bold;
 }

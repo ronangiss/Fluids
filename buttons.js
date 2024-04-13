@@ -29,36 +29,21 @@ $(function() {
 $(function() {
     $(".reference_system").on("click",function(e) {
         var content_string = $(this).text().trim();
-        if (content_string === "Cartesian") {
-            $(".cartesian_content").css("display", "inline");
-            $(".cylindrical_content").css("display", "none");
-            $(".spherical_content").css("display", "none");
-
-            $(this).css("background-color", "darkviolet");
-            $(this).css("color", "white");
-
-            $(this).siblings().css("background-color", "rgb(246, 237, 253)");
-            $(this).siblings().css("color", "black");
-        } else if (content_string === "Cylindrical") {
-            $(".cartesian_content").css("display", "none");
-            $(".cylindrical_content").css("display", "inline");
-            $(".spherical_content").css("display", "none");
-
-            $(this).css("background-color", "darkviolet");
-            $(this).css("color", "white");
-
-            $(this).siblings().css("background-color", "rgb(246, 237, 253)");
-            $(this).siblings().css("color", "black");
-        } else if (content_string === "Spherical") {
-            $(".cartesian_content").css("display", "none");
-            $(".cylindrical_content").css("display", "none");
-            $(".spherical_content").css("display", "inline");
-
-            $(this).css("background-color", "darkviolet");
-            $(this).css("color", "white");
-
-            $(this).siblings().css("background-color", "rgb(246, 237, 253)");
-            $(this).siblings().css("color", "black");
+        var content_list = $(this).parent().siblings(".reference_system_contents").children();
+        for (let i = 0; i < content_list.length; i++) {
+            if (content_list.eq(i).attr('id') === content_string) {
+                content_list.eq(i).css("display", "inline"); // show selected content
+                for (let j = 0; j < content_list.length; j++) {
+                    if (i != j) {
+                        content_list.eq(j).css("display", "none"); // hide other content
+                    }
+                }
+            }
         }
+        $(this).css("background-color", "darkviolet");
+        $(this).css("color", "white");
+
+        $(this).siblings().css("background-color", "rgb(246, 237, 253)");
+        $(this).siblings().css("color", "black");
     });
 });
