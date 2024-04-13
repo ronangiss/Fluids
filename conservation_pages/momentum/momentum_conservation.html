@@ -247,15 +247,217 @@
             </div>
     
             <div id="Cylindrical" style="display: none;">
-                <div class="equation_label">
-                    (Incompressible Newtonian Differential Form in Cylindrical Coordinates)
-                </div>
+            <div class="equation_line">
+                <span class="equation">
+                    <span>
+                    \( \dfrac{\partial{v_r}}{\partial{t}} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \(
+                        v_r \dfrac{\partial{v_r}}{\partial{r}} + 
+                        \dfrac{v_{\phi}}{r} \dfrac{\partial{v_r}}{\partial{\phi}} + 
+                        v_z \dfrac{\partial{v_r}}{\partial{z}} -
+                        \dfrac{v_{\phi}^2}{r}
+                        \)
+                    </span>
+                    <span>\( = \)</span>
+                    <span>
+                        \( -\dfrac{1}{\rho} \dfrac{\partial{P}}{\partial{r}} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \( \nu (
+                        \dfrac{\partial^2{v_r}}{\partial{r}^2} +
+                        \dfrac{1}{r^2} \dfrac{\partial^2{v_r}}{\partial{\phi}^2} + 
+                        \dfrac{\partial^2{v_r}}{\partial{z}^2} +
+                        \dfrac{1}{r} \dfrac{\partial{v_r}}{\partial{r}} -
+                        \dfrac{2}{r^2} \dfrac{\partial{v_{\phi}}}{\partial{\phi}} -
+                        \dfrac{v_r}{r^2}
+                        ) \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \( f_r \)
+                    </span>
+                </span>
+            </div>
+
+            <div class="equation_line">
+                <span class="equation">
+                    <span>
+                    \( \dfrac{\partial{v_{\phi}}}{\partial{t}} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \(
+                        v_r \dfrac{\partial{v_{\phi}}}{\partial{r}} + 
+                        \dfrac{v_{\phi}}{r} \dfrac{\partial{v_{\phi}}}{\partial{\phi}} + 
+                        v_z \dfrac{\partial{v_{\phi}}}{\partial{z}} +
+                        \dfrac{v_r v_{\phi}}{r}
+                        \)
+                    </span>
+                    <span>\( = \)</span>
+                    <span>
+                        \( -\dfrac{1}{\rho} \dfrac{1}{r} \dfrac{\partial{P}}{\partial{\phi}} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \( \nu (
+                        \dfrac{\partial^2{v_{\phi}}}{\partial{r}^2} +
+                        \dfrac{1}{r^2} \dfrac{\partial^2{v_{\phi}}}{\partial{\phi}^2} + 
+                        \dfrac{\partial^2{v_{\phi}}}{\partial{z}^2} +
+                        \dfrac{1}{r} \dfrac{\partial{v_{\phi}}}{\partial{r}} +
+                        \dfrac{2}{r^2} \dfrac{\partial{v_r}}{\partial{\phi}} -
+                        \dfrac{v_{\phi}}{r^2}
+                        ) \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \( f_{\phi} \)
+                    </span>
+                </span>
+            </div>
+
+            <div class="equation_line">
+                <span class="equation">
+                    <span>
+                    \( \dfrac{\partial{v_z}}{\partial{t}} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \(
+                        v_r \dfrac{\partial{v_z}}{\partial{r}} + 
+                        \dfrac{v_{\phi}}{r} \dfrac{\partial{v_z}}{\partial{\phi}} + 
+                        v_z \dfrac{\partial{v_z}}{\partial{z}}
+                        \)
+                    </span>
+                    <span>\( = \)</span>
+                    <span>
+                        \( -\dfrac{1}{\rho} \dfrac{\partial{P}}{\partial{z}} \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \( \nu (
+                        \dfrac{\partial^2{v_z}}{\partial{r}^2} +
+                        \dfrac{1}{r^2} \dfrac{\partial^2{v_z}}{\partial{\phi}^2} + 
+                        \dfrac{\partial^2{v_z}}{\partial{z}^2} +
+                        \dfrac{1}{r} \dfrac{\partial{v_z}}{\partial{r}}
+                        ) \)
+                    </span>
+                    <span>\( + \)</span>
+                    <span>
+                        \( f_z \)
+                    </span>
+                </span>
+            </div>
+
+            <div class="equation_label">
+                (Incompressible Newtonian Differential Form in Cylindrical Coordinates)
+            </div>
             </div>
     
             <div id="Spherical" style="display: none;">
-                <div class="equation_label">
-                    (Incompressible Newtonian Differential Form in Spherical Coordinates)
+            
+                <div class="equation_line">
+                    <span class="equation">
+                        <span>
+                        \( \dfrac{\partial{v_x}}{\partial{t}} \)
+                        </span>
+                        <span>\( + \)</span>
+                        <span>
+                            \(
+                            v_x \dfrac{\partial{v_x}}{\partial{x}} + 
+                            v_y \dfrac{\partial{v_x}}{\partial{y}} + 
+                            v_z \dfrac{\partial{v_x}}{\partial{z}}
+                            \)
+                        </span>
+                        <span>\( = \)</span>
+                        <span>
+                            \( -\dfrac{1}{\rho} \dfrac{\partial{P}}{\partial{x}} \)
+                        </span>
+                        <span>\( + \)</span>
+                        <span>
+                            \( \nu (
+                            \dfrac{\partial^2{v_x}}{\partial{x}^2} +
+                            \dfrac{\partial^2{v_x}}{\partial{y}^2} + 
+                            \dfrac{\partial^2{v_x}}{\partial{z}^2}
+                            ) \)
+                        </span>
+                        <span>\( + \)</span>
+                        <span>
+                            \( f_x \)
+                        </span>
+                    </span>
                 </div>
+
+                <div class="equation_line">
+                    <span class="equation">
+                        <span>
+                        \( \dfrac{\partial{v_x}}{\partial{t}} \)
+                        </span>
+                        <span>\( + \)</span>
+                        <span>
+                            \(
+                            v_x \dfrac{\partial{v_x}}{\partial{x}} + 
+                            v_y \dfrac{\partial{v_x}}{\partial{y}} + 
+                            v_z \dfrac{\partial{v_x}}{\partial{z}}
+                            \)
+                        </span>
+                        <span>\( = \)</span>
+                        <span>
+                            \( -\dfrac{1}{\rho} \dfrac{\partial{P}}{\partial{x}} \)
+                        </span>
+                        <span>\( + \)</span>
+                        <span>
+                            \( \nu (
+                            \dfrac{\partial^2{v_x}}{\partial{x}^2} +
+                            \dfrac{\partial^2{v_x}}{\partial{y}^2} + 
+                            \dfrac{\partial^2{v_x}}{\partial{z}^2}
+                            ) \)
+                        </span>
+                        <span>\( + \)</span>
+                        <span>
+                            \( f_x \)
+                        </span>
+                    </span>
+                </div>
+
+                <div class="equation_line">
+                    <span class="equation">
+                        <span>
+                        \( \dfrac{\partial{v_x}}{\partial{t}} \)
+                        </span>
+                        <span>\( + \)</span>
+                        <span>
+                            \(
+                            v_x \dfrac{\partial{v_x}}{\partial{x}} + 
+                            v_y \dfrac{\partial{v_x}}{\partial{y}} + 
+                            v_z \dfrac{\partial{v_x}}{\partial{z}}
+                            \)
+                        </span>
+                        <span>\( = \)</span>
+                        <span>
+                            \( -\dfrac{1}{\rho} \dfrac{\partial{P}}{\partial{x}} \)
+                        </span>
+                        <span>\( + \)</span>
+                        <span>
+                            \( \nu (
+                            \dfrac{\partial^2{v_x}}{\partial{x}^2} +
+                            \dfrac{\partial^2{v_x}}{\partial{y}^2} + 
+                            \dfrac{\partial^2{v_x}}{\partial{z}^2}
+                            ) \)
+                        </span>
+                        <span>\( + \)</span>
+                        <span>
+                            \( f_x \)
+                        </span>
+                    </span>
+                </div>
+
+            <div class="equation_label">
+                (Incompressible Newtonian Differential Form in Spherical Coordinates)
+            </div>
             </div>
             </div>
     
