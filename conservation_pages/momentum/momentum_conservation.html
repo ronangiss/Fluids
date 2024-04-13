@@ -362,31 +362,37 @@
                 <div class="equation_line">
                     <span class="equation">
                         <span>
-                        \( \dfrac{\partial{v_x}}{\partial{t}} \)
+                        \( \dfrac{\partial{v_r}}{\partial{t}} \)
                         </span>
                         <span>\( + \)</span>
                         <span>
                             \(
-                            v_x \dfrac{\partial{v_x}}{\partial{x}} + 
-                            v_y \dfrac{\partial{v_x}}{\partial{y}} + 
-                            v_z \dfrac{\partial{v_x}}{\partial{z}}
+                            v_r \dfrac{\partial{v_r}}{\partial{r}} + 
+                            \dfrac{v_{\theta}}{r} \dfrac{\partial{v_r}}{\partial{\theta}} + 
+                            \dfrac{v_{\phi}}{r \sin\theta} \dfrac{\partial{v_r}}{\partial{\phi}} -
+                            \dfrac{v_{\theta}^2 + v_{\phi}^2}{r}
                             \)
                         </span>
                         <span>\( = \)</span>
                         <span>
-                            \( -\dfrac{1}{\rho} \dfrac{\partial{P}}{\partial{x}} \)
+                            \( -\dfrac{1}{\rho} \dfrac{\partial{P}}{\partial{r}} \)
                         </span>
                         <span>\( + \)</span>
                         <span>
                             \( \nu (
-                            \dfrac{\partial^2{v_x}}{\partial{x}^2} +
-                            \dfrac{\partial^2{v_x}}{\partial{y}^2} + 
-                            \dfrac{\partial^2{v_x}}{\partial{z}^2}
+                            \dfrac{1}{r} \dfrac{\partial^2{(r v_r)}}{\partial{r}^2} +
+                            \dfrac{1}{r^2} \dfrac{\partial^2{v_r}}{\partial{\theta}^2} + 
+                            \dfrac{1}{r^2 \sin^2\theta} \dfrac{\partial^2{v_r}}{\partial{\phi}^2} +
+                            \dfrac{\cot\theta}{r^2} \dfrac{\partial{v_r}}{\partial{\theta}} -
+                            \dfrac{2}{r^2} \dfrac{\partial{v_{\theta}}}{\partial{\theta}} - 
+                            \dfrac{2}{r^2 \sin\theta} \dfrac{\partial{v_{\phi}}}{\partial{\phi}} -
+                            \dfrac{2 v_r}{r^2} -
+                            \dfrac{2 \cot\theta}{r^2} v_{\theta}
                             ) \)
                         </span>
                         <span>\( + \)</span>
                         <span>
-                            \( f_x \)
+                            \( f_r \)
                         </span>
                     </span>
                 </div>
@@ -394,31 +400,37 @@
                 <div class="equation_line">
                     <span class="equation">
                         <span>
-                        \( \dfrac{\partial{v_x}}{\partial{t}} \)
+                        \( \dfrac{\partial{v_{\theta}}}{\partial{t}} \)
                         </span>
                         <span>\( + \)</span>
                         <span>
                             \(
-                            v_x \dfrac{\partial{v_x}}{\partial{x}} + 
-                            v_y \dfrac{\partial{v_x}}{\partial{y}} + 
-                            v_z \dfrac{\partial{v_x}}{\partial{z}}
+                            v_r \dfrac{\partial{v_{\theta}}}{\partial{r}} + 
+                            \dfrac{v_{\theta}}{r} \dfrac{\partial{v_{\theta}}}{\partial{\theta}} + 
+                            \dfrac{v_{\phi}}{r \sin\theta} \dfrac{\partial{v_{\theta}}}{\partial{\phi}} +
+                            \dfrac{v_r v_{\theta}}{r} -
+                            \dfrac{v_{\phi}^2 \cot\theta}{r}
                             \)
                         </span>
                         <span>\( = \)</span>
                         <span>
-                            \( -\dfrac{1}{\rho} \dfrac{\partial{P}}{\partial{x}} \)
+                            \( -\dfrac{1}{\rho} \dfrac{1}{r} \dfrac{\partial{P}}{\partial{\theta}} \)
                         </span>
                         <span>\( + \)</span>
                         <span>
                             \( \nu (
-                            \dfrac{\partial^2{v_x}}{\partial{x}^2} +
-                            \dfrac{\partial^2{v_x}}{\partial{y}^2} + 
-                            \dfrac{\partial^2{v_x}}{\partial{z}^2}
+                            \dfrac{1}{r} \dfrac{\partial^2{(r v_{\theta})}}{\partial{r}^2} +
+                            \dfrac{1}{r^2} \dfrac{\partial^2{v_{\theta}}}{\partial{\theta}^2} + 
+                            \dfrac{1}{r^2 \sin^2\theta} \dfrac{\partial^2{v_{\theta}}}{\partial{\phi}^2} +
+                            \dfrac{\cot\theta}{r^2} \dfrac{\partial{v_{\theta}}}{\partial{\theta}} -
+                            \dfrac{2 \cos\theta}{r^2 \sin^2\theta} \dfrac{\partial{v_{\phi}}}{\partial{\phi}} +
+                            \dfrac{2}{r^2} \dfrac{\partial{v_r}}{\partial{\theta}} -
+                            \dfrac{v_{\theta}}{r^2 \sin^2\theta}
                             ) \)
                         </span>
                         <span>\( + \)</span>
                         <span>
-                            \( f_x \)
+                            \( f_{\theta} \)
                         </span>
                     </span>
                 </div>
@@ -426,31 +438,37 @@
                 <div class="equation_line">
                     <span class="equation">
                         <span>
-                        \( \dfrac{\partial{v_x}}{\partial{t}} \)
+                        \( \dfrac{\partial{v_{\phi}}}{\partial{t}} \)
                         </span>
                         <span>\( + \)</span>
                         <span>
                             \(
-                            v_x \dfrac{\partial{v_x}}{\partial{x}} + 
-                            v_y \dfrac{\partial{v_x}}{\partial{y}} + 
-                            v_z \dfrac{\partial{v_x}}{\partial{z}}
+                            v_r \dfrac{\partial{v_{\phi}}}{\partial{r}} + 
+                            \dfrac{v_{\theta}}{r} \dfrac{\partial{v_{\phi}}}{\partial{\theta}} + 
+                            \dfrac{v_{\phi}}{r \sin\theta} \dfrac{\partial{v_{\phi}}}{\partial{\phi}} +
+                            \dfrac{v_r v_{\phi}}{r} +
+                            \dfrac{v_{\theta} v_{\phi} \cot\theta}{r}
                             \)
                         </span>
                         <span>\( = \)</span>
                         <span>
-                            \( -\dfrac{1}{\rho} \dfrac{\partial{P}}{\partial{x}} \)
+                            \( -\dfrac{1}{\rho} \dfrac{1}{r \sin\theta} \dfrac{\partial{P}}{\partial{\phi}} \)
                         </span>
                         <span>\( + \)</span>
                         <span>
                             \( \nu (
-                            \dfrac{\partial^2{v_x}}{\partial{x}^2} +
-                            \dfrac{\partial^2{v_x}}{\partial{y}^2} + 
-                            \dfrac{\partial^2{v_x}}{\partial{z}^2}
+                            \dfrac{1}{r} \dfrac{\partial^2{(r v_{\phi})}}{\partial{r}^2} +
+                            \dfrac{1}{r^2} \dfrac{\partial^2{v_{\phi}}}{\partial{\theta}^2} + 
+                            \dfrac{1}{r^2 \sin^2\theta} \dfrac{\partial^2{v_{\phi}}}{\partial{\phi}^2} +
+                            \dfrac{\cot\theta}{r^2} \dfrac{\partial{v_{\phi}}}{\partial{\theta}} +
+                            \dfrac{2}{r^2 \sin\theta} \dfrac{\partial{v_r}}{\partial{\phi}} +
+                            \dfrac{2 \cos\theta}{r^2 \sin^2\theta} \dfrac{\partial{v_{\theta}}}{\partial{\phi}} -
+                            \dfrac{v_{\phi}}{r^2 \sin^2\theta}
                             ) \)
                         </span>
                         <span>\( + \)</span>
                         <span>
-                            \( f_x \)
+                            \( f_{\phi} \)
                         </span>
                     </span>
                 </div>
