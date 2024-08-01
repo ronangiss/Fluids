@@ -1,3 +1,4 @@
+
 $('#m_in').on('change', function () {
     var m_in = parseInt($(this).val());
     var m_out = parseInt($('#m_out').val());
@@ -107,6 +108,7 @@ function animatePoof() {
     animate();
     setTimeout("$('#puff').hide()", frames * frameDelay);
 }
+
 // var curColor = "rgb(246, 237, 253)";
 curColor = $(function() {
     $('.equation_assumptions').click(function(e) {

@@ -44,10 +44,19 @@
             </button>
         </div>
         <h2>Momentum Conservation</h2>
-        <span id="puff"></span>
+        <span class="puff" id="p1"></span>
+        <span class="puff" id="p2"></span>
+        <span class="puff" id="p3"></span>
         <div id="beginner_content">
-            <section>    
-            <div class="level_select">
+            <section>
+
+            <div class="centerText">
+                <button class="equation_assumptions">
+                Steady
+                </button>
+            </div>    
+
+            <div class="centerText">
                 <button class="reference_system">
                     Vector
                 </button>
@@ -63,7 +72,7 @@
             </div>
             
             <div class="reference_system_contents">
-            <div id="Vector">
+            <div id="Vector" style="display: inline;">
                 <div class="equation_line">
                     <span class="equation_left_hidden">
                         <span class="equation_hidden_contents">Time derivative of momentum.</span>
@@ -73,6 +82,9 @@
                     <span class="equation">
                         <span class="equation_left">
                         \( \rho\dfrac{\partial\vec{v}}{\partial t} \)
+                        </span>
+                        <span class="equation_left_replacement">
+                            \( 0 \, \)
                         </span>
                         <span>\( + \)</span>
                         <span class="equation_left">
@@ -110,6 +122,9 @@
                     <span>
                     \( \dfrac{\partial{v_x}}{\partial{t}} \)
                     </span>
+                    <span class="equation_left_replacement">
+                        \( 0 \, \)
+                    </span>
                     <span>\( + \)</span>
                     <span>
                         \(
@@ -141,6 +156,9 @@
                 <span class="equation">
                     <span>
                     \( \dfrac{\partial{v_y}}{\partial{t}} \)
+                    </span>
+                    <span class="equation_left_replacement">
+                        \( 0 \, \)
                     </span>
                     <span>\( + \)</span>
                     <span>
@@ -174,6 +192,9 @@
                 <span class="equation">
                     <span>
                     \( \dfrac{\partial{v_z}}{\partial{t}} \)
+                    </span>
+                    <span class="equation_left_replacement">
+                        \( 0 \, \)
                     </span>
                     <span>\( + \)</span>
                     <span>
@@ -251,6 +272,9 @@
                     <span>
                     \( \dfrac{\partial{v_r}}{\partial{t}} \)
                     </span>
+                    <span class="equation_left_replacement">
+                        \( 0 \, \)
+                    </span>
                     <span>\( + \)</span>
                     <span>
                         \(
@@ -287,6 +311,9 @@
                     <span>
                     \( \dfrac{\partial{v_{\phi}}}{\partial{t}} \)
                     </span>
+                    <span class="equation_left_replacement">
+                        \( 0 \, \)
+                    </span>
                     <span>\( + \)</span>
                     <span>
                         \(
@@ -322,6 +349,9 @@
                 <span class="equation">
                     <span>
                     \( \dfrac{\partial{v_z}}{\partial{t}} \)
+                    </span>
+                    <span class="equation_left_replacement">
+                        \( 0 \, \)
                     </span>
                     <span>\( + \)</span>
                     <span>
@@ -363,6 +393,9 @@
                         <span>
                         \( \dfrac{\partial{v_r}}{\partial{t}} \)
                         </span>
+                        <span class="equation_left_replacement">
+                            \( 0 \, \)
+                        </span>
                         <span>\( + \)</span>
                         <span>
                             \(
@@ -401,6 +434,9 @@
                         <span>
                         \( \dfrac{\partial{v_{\theta}}}{\partial{t}} \)
                         </span>
+                        <span class="equation_left_replacement">
+                            \( 0 \, \)
+                        </span>
                         <span>\( + \)</span>
                         <span>
                             \(
@@ -438,6 +474,9 @@
                     <span class="equation">
                         <span>
                         \( \dfrac{\partial{v_{\phi}}}{\partial{t}} \)
+                        </span>
+                        <span class="equation_left_replacement">
+                            \( 0 \, \)
                         </span>
                         <span>\( + \)</span>
                         <span>
@@ -600,6 +639,7 @@
 <!-- jquery -->
 <script src="../../jquery-3.6.3.min.js"></script>
 <script src="../../buttons.js"></script>
+<script src="momentum_conservation.js"></script>
 <script src="../../equation_highlight.js"></script>
 </body>
 </html>
